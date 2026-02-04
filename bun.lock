@@ -1,0 +1,17 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "10k24.com",
+      "devDependencies": {
+        "liquid": "^5.1.1",
+      },
+    },
+  },
+  "packages": {
+    "liquid": ["liquid@5.1.1", "", { "dependencies": { "strftime": "~0.9.2" } }, "sha512-GbZhB1kgcDR1NE1FXEGtcK1EjMUXe2+ENgRecjs5V3ksZUjzZdC3leff/FoL4E02/9Y9tdoHY1zJ2QMwb5kuuw=="],
+
+    "strftime": ["strftime@0.9.2", "", {}, "sha512-wu4xPBupxILrTO8TPaQRSTG7UOEWPhk232QXK3cdTejPeTWsXRpIMkgGF1JKnPY4OHNKYWUa//k0crofghxAFA=="],
+  }
+}

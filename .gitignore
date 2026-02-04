@@ -1,3 +1,6 @@
+# We use Bun
+package-lock.json
+
 # Logs
 logs
 *.log

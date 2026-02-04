@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: *.json
+Disallow: *.md
+Disallow: /src
+
+Sitemap: https://www.10k24.com/sitemap.txt

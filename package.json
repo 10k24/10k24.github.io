@@ -1,0 +1,30 @@
+{
+  "name": "10k24.com",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/10k24/10k24.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/10k24/10k24.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/10k24/10k24.github.io.git"
+  },
+  "license": "GPL-2.0",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "bunx @11ty/eleventy",
+    "start": "bunx @11ty/eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "liquidjs": "^10.24.0"
+  }
+}

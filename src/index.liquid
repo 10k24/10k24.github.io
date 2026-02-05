@@ -3,11 +3,15 @@ title: "Home"
 layout: base
 ---
 
-<div>
-    <div>
-        <!-- <p>Project 1</p> -->
-    </div>
-    <div>
-        <!-- <p>Project 2</p> -->
-    </div>
+<div class="project-list">
+    {%- for project in collections.projects -%}
+        <div class="project-list-item">
+            <a href="{{ project.url }}">
+                <!-- <img /> -->
+                <p>{{project.data.title}}</p>
+                <p>{{project.data.location}}</p>
+                <p>{{project.data.media}}</p>
+            </a>
+        </div>
+    {%- endfor -%}
 </div>

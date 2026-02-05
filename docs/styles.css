@@ -41,6 +41,16 @@ footer {
 
 }
 
+.project-list {}
+.project-list-item {}
+.project-list-item a {
+    text-decoration: none;
+}
+
+.project-list-item a:hover {
+    text-decoration: underline;
+}
+
 /* TODO: responsive font sizes */
 @media only screen and (max-width: 860px) {
     body {

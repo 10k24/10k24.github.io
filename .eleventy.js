@@ -1,6 +1,8 @@
 const { Liquid } = require("liquidjs");
+const { RenderPlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
+    eleventyConfig.addPlugin(RenderPlugin);
     eleventyConfig.setInputDirectory("src");
     eleventyConfig.setOutputDirectory("docs");
 
@@ -37,7 +39,8 @@ module.exports = function (eleventyConfig) {
     });
 
     const options = {
-
+        root: ["./src"],
+        extname: ".liquid"
     };
     eleventyConfig.setLibrary("liquid", new Liquid(options));
 };

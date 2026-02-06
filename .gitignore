@@ -1,6 +1,8 @@
 # We use Bun
 package-lock.json
 
+.DS_Store
+
 # Logs
 logs
 *.log

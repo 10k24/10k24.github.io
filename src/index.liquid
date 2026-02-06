@@ -1,17 +1,16 @@
 ---
 title: "Home"
 layout: base
+description: "A computing / creativity / collaboration studio based in Los Angeles"
 ---
 
+<section class="hero">
+    <img class="hero-logo" draggable="false" src="/img/10k24_primary_logo.svg" />
+</section>
 <div class="project-list">
     {%- for project in collections.projects -%}
         <div class="project-list-item">
-            <a href="{{ project.url }}">
-                <!-- <img /> -->
-                <p>{{project.data.title}}</p>
-                <p>{{project.data.location}}</p>
-                <p>{{project.data.media}}</p>
-            </a>
+            {% include "_includes/partials/project-item" %}
         </div>
     {%- endfor -%}
 </div>

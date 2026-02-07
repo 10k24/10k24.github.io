@@ -2,8 +2,15 @@
 layout: base
 ---
 
+<div class="project-header">
+    <!-- TODO: figure out how to resolve cover img/gif, OG, this header; maybe on-hover of each -->
+    <!-- TODO: error if such file is missing -->
+    <img class="og-scale" src="./{{cover}}" alt="{{project.data.title}} cover image" />
+    <h1>{{title}}</h2>
+    <p class="project-meta">{{location}}</p>
+    <p class="project-meta">{{media}}</p>
+</div>
+
 <div>
-    <h2>{{title}}</h2>
-    <p>{{location}}</p>
-    <p>{{media}}</p>
+    {{ content }}
 </div>

@@ -3,7 +3,6 @@
 
 ## Features
 
-- [ ] favicon
 - [ ] meta tags
 - [ ] opengraph
 - [ ] components for project, metadata, etc?
@@ -20,3 +19,7 @@
  }
 {% endhighlight %}
 ```
+
+## Future ideas
+
+- [ ] Animated favicon, see https://github.com/stefanjudis/animated-svg-favicon/blob/master/index.html

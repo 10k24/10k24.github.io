@@ -5,9 +5,11 @@ description: "A computing / creativity / collaboration studio based in Los Angel
 ---
 
 <section class="hero">
-    <img class="hero-logo" draggable="false" src="/img/10k24_primary_logo.svg" />
+    <a href="#projects">
+        <img class="hero-logo" draggable="false" src="/img/10k24_primary_logo.svg" />
+    </a>
 </section>
-<div class="project-list">
+<div class="project-list" id="projects">
     {%- for project in collections.projects -%}
         <div class="project-list-item">
             {% include "_includes/partials/project-item" %}

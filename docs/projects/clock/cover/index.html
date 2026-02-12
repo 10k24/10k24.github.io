@@ -1,0 +1,31 @@
+
+
+
+
+<div id="p5-clock-1770883118" class="square-p5-container" data-sketch-target="p5-clock-1770883118"></div>
+<script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+<script src="./clock.js"></script>
+<script>
+(function() {
+  const containerId = 'p5-clock-1770883118';
+  const container = document.getElementById(containerId);
+  
+  if (!container || !window.setup) return;
+  
+  // Wrap setup to move canvas after p5 creates it
+  const originalSetup = window.setup;
+  window.setup = function() {
+    originalSetup.call(this);
+    
+    // Find the canvas p5 just created (it's on body and has defaultCanvas ID or no parent container)
+    const canvas = Array.from(document.querySelectorAll('canvas')).find(c => 
+      c.parentElement === document.body || 
+      (c.parentElement && !c.parentElement.hasAttribute('data-sketch-target'))
+    );
+    
+    if (canvas && container) {
+      container.appendChild(canvas);
+    }
+  };
+})();
+</script>

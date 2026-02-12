@@ -20,9 +20,10 @@ module.exports = function (eleventyConfig) {
         "webp",
         "gif",
         "pdf",
-        
         "mp4",
 
+        "ttf",
+        "js",
         "webmanifest",
         "xml",
         "txt"
@@ -36,7 +37,7 @@ module.exports = function (eleventyConfig) {
     // - feed.xml
 
     eleventyConfig.setLiquidOptions({
-        jsTruthy: true,
+        jsTruthy: true
     });
 
     const options = {

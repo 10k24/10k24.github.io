@@ -132,6 +132,14 @@ img {
     max-height: 100%;
 }
 
+canvas {
+  margin: auto auto;
+  padding: 2rem;
+
+  display: block;
+}
+
+
 /* TODO: responsive font sizes */
 @media only screen and (max-width: 860px) {
     p {

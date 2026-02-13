@@ -41,7 +41,8 @@
 
     
     // TODO: 32x19 available for clock
-    textClock(today, colors.default, 1);
+    textClock("10k24", colors.default, 2, 4);
+    textClock(`${today.getFullYear()}`, colors.highlight, 5, 9);
     
     // TODO: every 1 hour do an interesting transition/animation
     
@@ -50,20 +51,21 @@
     drawHours(today, colors.default, calendarStartRow - 2);
     drawCalendar(today, colors.default, calendarStartRow);
 
+    // TODO: vellum diffusion via custom shader
+    // filter(BLUR, 2);
+    // filter(fShader);
   }
 
   // TODO: convert to LEDs, but that should be handled when converting to pixel buffers,
   // this whole “led-pixel” look is just for web display vs. on the LED matrix
   // maybe runtime optimization to cache essential char patterns
-  function textClock(today, c, row) {
+  function textClock(str, c, scale, row) {
     push();
     fill(c);
-    textSize(5 * ppp);
+    textSize(scale * ppp);
     textAlign(CENTER);
     // TODO: texttopoints https://p5js.org/reference/p5.Font/textToPoints/
-    // text(`${today.getHours()}:${today.getMinutes() >= 10 ? today.getMinutes() : "0"+today.getMinutes()}`, width/2, 4*ppp);
-    // text(`${today.getMonth()},${today.getDate()}`, width/2, 7*ppp);
-    text(`${today.getFullYear()}`, width/2, 10*ppp);
+    text(str, width/2, row*ppp);
     pop();
   }
 

@@ -21,6 +21,7 @@
 
 ## Future ideas
 
+- [ ] Consider moving to Cloudflare Pages: https://pages.cloudflare.com/
 - [ ] Add shop link once products are listed https://shop.10k24.com
 - [ ] more custom CSS easing: https://cubic-bezier.com/
 - [ ] Animated favicon, see https://github.com/stefanjudis/animated-svg-favicon/blob/master/index.html

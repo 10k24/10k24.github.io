@@ -70,34 +70,15 @@
 
 
 
-<div id="p5-clock-1770979032" class="square-p5-container" data-sketch-target="p5-clock-1770979032"></div>
+<div id="p5-clock-1771122930" class="square-p5-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
 <script src="./clock.js"></script>
 <script>
-(function() {
-  const containerId = 'p5-clock-1770979032';
-  const container = document.getElementById(containerId);
-  
-  if (!container || !window.setup) return;
-  
-  // Wrap setup to move canvas after p5 creates it
-  const originalSetup = window.setup;
-  window.setup = function() {
-    originalSetup.call(this);
-    
-    // Find the canvas p5 just created (it's on body and has defaultCanvas ID or no parent container)
-    const canvas = Array.from(document.querySelectorAll('canvas')).find(c => 
-      c.parentElement === document.body || 
-      (c.parentElement && !c.parentElement.hasAttribute('data-sketch-target'))
-    );
-    
-    if (canvas && container) {
-      container.appendChild(canvas);
-    }
-  };
-})();
+  // Instantiate the sketch in instance mode
+  if (typeof sketchFunction === 'function') {
+    new p5(sketchFunction, 'p5-clock-1771122930');
+  }
 </script>
-
 </div>
     </main>
     <footer>

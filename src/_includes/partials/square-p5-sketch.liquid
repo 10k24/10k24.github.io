@@ -2,30 +2,12 @@
 {% assign sketchId = sketch | replace: "./", "" | replace: ".js", "" | replace: "/", "-" | append: "-" | append: timestamp %}
 {% assign containerId = "p5-" | append: sketchId %}
 
-<div id="{{containerId}}" class="square-p5-container" data-sketch-target="{{containerId}}"></div>
+<div id="{{containerId}}" class="square-p5-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
 <script src="{{sketch}}"></script>
 <script>
-(function() {
-  const containerId = '{{containerId}}';
-  const container = document.getElementById(containerId);
-  
-  if (!container || !window.setup) return;
-  
-  // Wrap setup to move canvas after p5 creates it
-  const originalSetup = window.setup;
-  window.setup = function() {
-    originalSetup.call(this);
-    
-    // Find the canvas p5 just created (it's on body and has defaultCanvas ID or no parent container)
-    const canvas = Array.from(document.querySelectorAll('canvas')).find(c => 
-      c.parentElement === document.body || 
-      (c.parentElement && !c.parentElement.hasAttribute('data-sketch-target'))
-    );
-    
-    if (canvas && container) {
-      container.appendChild(canvas);
-    }
-  };
-})();
+  // Instantiate the sketch in instance mode
+  if (typeof sketchFunction === 'function') {
+    new p5(sketchFunction, '{{containerId}}');
+  }
 </script>

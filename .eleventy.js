@@ -1,8 +1,10 @@
 const { Liquid } = require("liquidjs");
 const { RenderPlugin } = require("@11ty/eleventy");
+const transpileSketchesPlugin = require("./transpile-sketches-plugin.js");
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(RenderPlugin);
+    eleventyConfig.addPlugin(transpileSketchesPlugin);
     eleventyConfig.setInputDirectory("src");
     eleventyConfig.setOutputDirectory("docs");
 

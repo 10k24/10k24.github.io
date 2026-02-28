@@ -7,6 +7,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(transpileSketchesPlugin);
     eleventyConfig.setInputDirectory("src");
     eleventyConfig.setOutputDirectory("docs");
+    eleventyConfig.ignores.add("**/cover.liquid");
 
     eleventyConfig.setTemplateFormats([
         "liquid",
@@ -25,7 +26,6 @@ module.exports = function (eleventyConfig) {
         "mp4",
 
         "ttf",
-        "js",
         "webmanifest",
         "xml",
         "txt"

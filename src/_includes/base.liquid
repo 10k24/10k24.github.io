@@ -1,5 +1,7 @@
 ---
 author: "TEN THOUSAND IDEAS, TWENTY-FOUR HOURS"
+baseURL: "https://10k24.com"
+openGraphImage: "/img/opengraph.png"
 ---
 
 <!DOCTYPE html>
@@ -11,6 +13,13 @@ author: "TEN THOUSAND IDEAS, TWENTY-FOUR HOURS"
     <meta name="description" content="{{description}}">
     <meta name="author" content="{{author}}">
 
+    <meta property="og:url" content="{{baseURL}}{{page.url}}" />
+    <meta property="og:title" content="TEN THOUSAND IDEAS, TWENTY-FOUR HOURS | {{title}}" />
+    <meta property="og:image" content="{{baseURL}}{{openGraphImage}}" />
+    <meta property="og:description" content="{{description}}" />
+    <meta property="og:type" content="website" />
+    <meta property="twitter:card" content="summary_large_image" />
+
     <link rel="stylesheet" href="https://use.typekit.net/rli7dce.css">
     <link rel="stylesheet" href="/styles.css">
 
@@ -21,9 +30,15 @@ author: "TEN THOUSAND IDEAS, TWENTY-FOUR HOURS"
     <meta name="apple-mobile-web-app-title" content="10k24" />
     <link rel="manifest" href="/img/site.webmanifest" />
     
-    <!-- TODO: meta -->
-    <!-- TODO: og -->
+    <!-- TODO: schema markup -->
     
+    {% if multiSketch %}
+    <!-- Multi-sketch mode: load p5.js once for the entire page -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+    {% else %}
+    <!-- Single sketch mode: load p5.js once -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+    {% endif %}
 </head>
 <body>
     <header>
@@ -66,6 +81,50 @@ author: "TEN THOUSAND IDEAS, TWENTY-FOUR HOURS"
         gtag('js', new Date());
 
         gtag('config', 'G-CPZFEJK5BG');
+    </script>
+    <script>
+        // Load unique sketch scripts and instantiate all p5 sketches
+        window.sketches = window.sketches || {};
+        
+        const containers = document.querySelectorAll('[data-sketch-file]');
+        const uniqueSources = new Set();
+        
+        // Collect unique sketch sources
+        containers.forEach(function(container) {
+            const src = container.dataset.sketchSrc;
+            if (src) uniqueSources.add(src);
+        });
+        
+        // Load scripts sequentially
+        let loadPromise = Promise.resolve();
+        uniqueSources.forEach(function(src) {
+            loadPromise = loadPromise.then(function() {
+                return new Promise(function(resolve) {
+                    const script = document.createElement('script');
+                    script.src = src;
+                    script.onload = resolve;
+                    document.body.appendChild(script);
+                });
+            });
+        });
+        
+        // After all scripts loaded, instantiate sketches
+        loadPromise.then(function() {
+            containers.forEach(function(container) {
+                const sketchFile = container.dataset.sketchFile;
+                const containerId = sketchFile + '-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+                container.id = containerId;
+                if (window.sketches[sketchFile]) {
+                    window.sketches[containerId] = window.sketches[sketchFile];
+                }
+            });
+            
+            for (let s of Object.keys(window.sketches)) {
+                if (document.getElementById(s)) {
+                    new p5(window.sketches[s], s);
+                }
+            }
+        });
     </script>
 </body>
 </html>

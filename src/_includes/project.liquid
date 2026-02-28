@@ -8,7 +8,6 @@ layout: base
     {% if hideCover != true %}
         <img class="og-scale" src="./{{cover}}" alt="{{title}} cover image" />
     {% endif %}
-    
     {% if altCover != null %}
         {% include "./{{ page.url }}{{altCover}}" %}
     {% endif %}

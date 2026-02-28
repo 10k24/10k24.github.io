@@ -1,13 +1,4 @@
-{% assign timestamp = "now" | date: "%s" %}
-{% assign sketchId = sketch | replace: "./", "" | replace: ".js", "" | replace: "/", "-" | append: "-" | append: timestamp %}
-{% assign containerId = "p5-" | append: sketchId %}
-
-<div id="{{containerId}}" class="square-p5-container"></div>
-<script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
-<script src="{{sketch}}"></script>
-<script>
-  // Instantiate the sketch in instance mode
-  if (typeof sketchFunction === 'function') {
-    new p5(sketchFunction, '{{containerId}}');
-  }
-</script>
+{%- comment -%}Extract just the filename without path or extension{%- endcomment -%}
+{%- assign sketchParts = sketch | split: "/" -%}
+{%- assign sketchFilename = sketchParts | last | replace: ".js", "" -%}
+<div class="square-p5-container" data-sketch-file="{{sketchFilename}}" data-sketch-src="{{sketch}}"></div>

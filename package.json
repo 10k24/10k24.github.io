@@ -20,6 +20,7 @@
   "scripts": {
     "build": "bunx @11ty/eleventy",
     "start": "bunx @11ty/eleventy --serve",
+    "clean": "bunx trash-cli docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "private": true,

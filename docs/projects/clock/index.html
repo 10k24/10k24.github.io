@@ -8,6 +8,13 @@
     <meta name="description" content="">
     <meta name="author" content="TEN THOUSAND IDEAS, TWENTY-FOUR HOURS">
 
+    <meta property="og:url" content="https://10k24.com/projects/clock/" />
+    <meta property="og:title" content="TEN THOUSAND IDEAS, TWENTY-FOUR HOURS | Clocks" />
+    <meta property="og:image" content="https://10k24.com/img/opengraph.png" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="twitter:card" content="summary_large_image" />
+
     <link rel="stylesheet" href="https://use.typekit.net/rli7dce.css">
     <link rel="stylesheet" href="/styles.css">
 
@@ -18,8 +25,11 @@
     <meta name="apple-mobile-web-app-title" content="10k24" />
     <link rel="manifest" href="/img/site.webmanifest" />
     
-    <!-- TODO: meta -->
-    <!-- TODO: og -->
+    <!-- TODO: schema markup -->
+    
+    
+    <!-- Single sketch mode: load p5.js once -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
     
 </head>
 <body>
@@ -53,7 +63,6 @@
     
     
     
-    
     <h1>Clocks</h2>
     <p class="project-meta">Los Angeles, CA</p>
     <p class="project-meta">Creative Coding</p>
@@ -66,19 +75,8 @@
 
 <p>Ticking down the year on a 32x32 pixel grid.</p>
 
+<div class="square-p5-container" data-sketch-file="clock" data-sketch-src="./clock.js"></div>
 
-
-
-
-<div id="p5-clock-1771122930" class="square-p5-container"></div>
-<script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
-<script src="./clock.js"></script>
-<script>
-  // Instantiate the sketch in instance mode
-  if (typeof sketchFunction === 'function') {
-    new p5(sketchFunction, 'p5-clock-1771122930');
-  }
-</script>
 </div>
     </main>
     <footer>
@@ -96,6 +94,50 @@
         gtag('js', new Date());
 
         gtag('config', 'G-CPZFEJK5BG');
+    </script>
+    <script>
+        // Load unique sketch scripts and instantiate all p5 sketches
+        window.sketches = window.sketches || {};
+        
+        const containers = document.querySelectorAll('[data-sketch-file]');
+        const uniqueSources = new Set();
+        
+        // Collect unique sketch sources
+        containers.forEach(function(container) {
+            const src = container.dataset.sketchSrc;
+            if (src) uniqueSources.add(src);
+        });
+        
+        // Load scripts sequentially
+        let loadPromise = Promise.resolve();
+        uniqueSources.forEach(function(src) {
+            loadPromise = loadPromise.then(function() {
+                return new Promise(function(resolve) {
+                    const script = document.createElement('script');
+                    script.src = src;
+                    script.onload = resolve;
+                    document.body.appendChild(script);
+                });
+            });
+        });
+        
+        // After all scripts loaded, instantiate sketches
+        loadPromise.then(function() {
+            containers.forEach(function(container) {
+                const sketchFile = container.dataset.sketchFile;
+                const containerId = sketchFile + '-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+                container.id = containerId;
+                if (window.sketches[sketchFile]) {
+                    window.sketches[containerId] = window.sketches[sketchFile];
+                }
+            });
+            
+            for (let s of Object.keys(window.sketches)) {
+                if (document.getElementById(s)) {
+                    new p5(window.sketches[s], s);
+                }
+            }
+        });
     </script>
 </body>
 </html>

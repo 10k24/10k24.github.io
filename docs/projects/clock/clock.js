@@ -1,4 +1,5 @@
-const sketchFunction = function(p) {
+window.sketches = window.sketches || {};
+window.sketches['clock'] = function(p) {
   const describe = (...args) => p.describe(...args);
   const describeElement = (...args) => p.describeElement(...args);
   const textOutput = (...args) => p.textOutput(...args);

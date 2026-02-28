@@ -8,6 +8,13 @@
     <meta name="description" content="">
     <meta name="author" content="TEN THOUSAND IDEAS, TWENTY-FOUR HOURS">
 
+    <meta property="og:url" content="https://10k24.com/projects/processing-native/" />
+    <meta property="og:title" content="TEN THOUSAND IDEAS, TWENTY-FOUR HOURS | Processing Native" />
+    <meta property="og:image" content="https://10k24.com/img/opengraph.png" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="twitter:card" content="summary_large_image" />
+
     <link rel="stylesheet" href="https://use.typekit.net/rli7dce.css">
     <link rel="stylesheet" href="/styles.css">
 
@@ -18,8 +25,11 @@
     <meta name="apple-mobile-web-app-title" content="10k24" />
     <link rel="manifest" href="/img/site.webmanifest" />
     
-    <!-- TODO: meta -->
-    <!-- TODO: og -->
+    <!-- TODO: schema markup -->
+    
+    
+    <!-- Single sketch mode: load p5.js once -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
     
 </head>
 <body>
@@ -55,7 +65,6 @@
     
     
     
-    
     <h1>Processing Native</h2>
     <p class="project-meta">Los Angeles, CA</p>
     <p class="project-meta">Software Engineering</p>
@@ -87,6 +96,50 @@
         gtag('js', new Date());
 
         gtag('config', 'G-CPZFEJK5BG');
+    </script>
+    <script>
+        // Load unique sketch scripts and instantiate all p5 sketches
+        window.sketches = window.sketches || {};
+        
+        const containers = document.querySelectorAll('[data-sketch-file]');
+        const uniqueSources = new Set();
+        
+        // Collect unique sketch sources
+        containers.forEach(function(container) {
+            const src = container.dataset.sketchSrc;
+            if (src) uniqueSources.add(src);
+        });
+        
+        // Load scripts sequentially
+        let loadPromise = Promise.resolve();
+        uniqueSources.forEach(function(src) {
+            loadPromise = loadPromise.then(function() {
+                return new Promise(function(resolve) {
+                    const script = document.createElement('script');
+                    script.src = src;
+                    script.onload = resolve;
+                    document.body.appendChild(script);
+                });
+            });
+        });
+        
+        // After all scripts loaded, instantiate sketches
+        loadPromise.then(function() {
+            containers.forEach(function(container) {
+                const sketchFile = container.dataset.sketchFile;
+                const containerId = sketchFile + '-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+                container.id = containerId;
+                if (window.sketches[sketchFile]) {
+                    window.sketches[containerId] = window.sketches[sketchFile];
+                }
+            });
+            
+            for (let s of Object.keys(window.sketches)) {
+                if (document.getElementById(s)) {
+                    new p5(window.sketches[s], s);
+                }
+            }
+        });
     </script>
 </body>
 </html>

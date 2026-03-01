@@ -3,6 +3,7 @@
 
 ## Features
 
+- [ ] mobile layout, especially menu
 - [ ] components for project, metadata, etc?
 - [ ] move ideas into this repo, maybe under a tools section: https://github.com/smideas/smideas.github.io/blob/main/index.html
 - [ ] other tools like icebreaker generator: https://github.com/facesfromplaces/facesfromplaces.github.io

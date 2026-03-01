@@ -1,3 +1,18 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+.square-p5-container {
+    max-height: 100vh;
+    margin: 4rem auto;
+}
+
 body {
     background-color: #000000;
     color: #FFFFFF;
@@ -23,8 +38,8 @@ a:hover {
 
 h1 {
     font-weight: 400;
-    font-size: 3.2rem;
-    margin-bottom: 4rem;
+    font-size: 2.8rem;
+    margin-bottom: 3.6rem;
 }
 
 h2 {
@@ -35,8 +50,6 @@ h2 {
 p {
     line-height: 1.6rem;
 }
-
-
 
 .center {
     text-align: center;
@@ -58,6 +71,17 @@ header, nav, footer, .footer-links {
     height: 1rem;
 }
 
+h1.hero-txt {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    width: 75vw;
+    margin: 0 auto;
+
+    opacity: 0;
+    /* animation: fadeIn 2s ease-in forwards; */
+    animation: fadeIn 1.5s cubic-bezier(.55,.1,.9,.55) forwards;
+}
+
 .nav-item, footer p {
     margin-right: 2rem;
 }
@@ -67,6 +91,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .hero {
@@ -77,23 +102,11 @@ section {
 .hero .hero-logo {
     width: 75vw;
     height: auto;
-
-    opacity: 0;
-    /* animation: fadeIn 2s ease-in forwards; */
-    animation: fadeIn 1.5s cubic-bezier(.55,.1,.9,.55) forwards;
+    margin: 8rem auto;
 }
 
 .half-height {
     min-height: 50vh;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 main {
@@ -117,7 +130,6 @@ footer {
     margin-bottom: 8rem;
 }
 
-
 .project-list-item a {
     text-decoration: none;
 }
@@ -131,7 +143,8 @@ h3.project-title {
 }
 
 h3.project-title:hover {
-    text-decoration: underline;}
+    text-decoration: underline;
+}
 
 p.project-meta {
     color: #808080;
@@ -149,10 +162,9 @@ img {
 }
 
 canvas {
-  margin: auto auto;
-  padding: 2rem;
-
-  display: block;
+    margin: auto auto;
+    padding: 2rem;
+    display: block;
 }
 
 

@@ -1,0 +1,10 @@
+---
+permalink: /sitemap.txt
+dynamicPermalink: false
+eleventyExcludeFromCollections: true
+---
+{%- for p in collections.all -%}
+{%- if p.url == '/'-%}
+{{metadata.baseURL}}{{p.url}}
+{%- endif -%}
+{%- endfor -%}

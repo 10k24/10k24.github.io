@@ -44,7 +44,8 @@ module.exports = function (eleventyConfig) {
 
     const options = {
         root: ["./src"],
-        extname: ".liquid"
+        extname: ".liquid",
+        greedy: false // This is done for sitemap.txt, consider an alternative solution
     };
     eleventyConfig.setLibrary("liquid", new Liquid(options));
 };

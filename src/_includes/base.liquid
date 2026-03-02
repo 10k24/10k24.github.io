@@ -1,21 +1,19 @@
 ---
-author: "TEN THOUSAND IDEAS, TWENTY-FOUR HOURS"
-baseURL: "https://10k24.com"
 openGraphImage: "/img/opengraph.png"
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>TEN THOUSAND IDEAS, TWENTY-FOUR HOURS | {{title}}</title>
+    <title>{{metadata.longname}}| {{title}}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{description}}">
-    <meta name="author" content="{{author}}">
+    <meta name="author" content="{{metadata.author}}">
 
-    <meta property="og:url" content="{{baseURL}}{{page.url}}" />
-    <meta property="og:title" content="TEN THOUSAND IDEAS, TWENTY-FOUR HOURS | {{title}}" />
-    <meta property="og:image" content="{{baseURL}}{{openGraphImage}}" />
+    <meta property="og:url" content="{{metadata.baseURL}}{{page.url}}" />
+    <meta property="og:title" content="{{metadata.longname}} | {{title}}" />
+    <meta property="og:image" content="{{metadata.baseURL}}{{openGraphImage}}" />
     <meta property="og:description" content="{{description}}" />
     <meta property="og:type" content="website" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -48,26 +46,28 @@ openGraphImage: "/img/opengraph.png"
             </a>
         </div>
         <nav>
-            <!-- TODO: setup baseURL -->
-            <div class="nav-item">
+            <!-- <div class="nav-item">
                 <a href="/">Home</a>
-            </div>
-            <div class="nav-item">
+            </div> -->
+            <!-- <div class="nav-item">
                 <a href="/projects">Projects</a>
-            </div>
+            </div> -->
             <!-- <div class="nav-item">
                 <a href="/ideas"></a>
             </div>
             <div class="nav-item">
                 <a href="/about"></a>
             </div> -->
+            <div class="nav-item">
+                <a href="mailto:info@10k24.com">Email Us</a>
+            </div>
         </nav>
     </header>
     <main>
         {{ content }}
     </main>
     <footer>
-        <p>&copy; <script>document.write((new Date()).getFullYear());</script> {{author}}.</p>
+        <p>&copy; <script>document.write((new Date()).getFullYear());</script> {{metadata.author}}.</p>
         <div class="footer-links">
             <p><a href="https://github.com/10k24" target=_blank>GitHub</a></p>
             <p><a href="https://instagram.com/10k24.studio" target=_blank>Instagram</a></p>

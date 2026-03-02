@@ -1,5 +1,7 @@
 {
     "baseURL": "https://10k24.com",
+    "shortname": "10k24",
+    "longname": "TEN THOUSAND IDEAS, TWENTY-FOUR HOURS",
     "author": {
         "name": "TEN THOUSAND IDEAS, TWENTY-FOUR HOURS",
         "email": "info@10k24.com"

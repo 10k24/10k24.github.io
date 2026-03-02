@@ -31,10 +31,11 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+/* TODO: bring back once project pages are added */
+/* a:hover {
     text-decoration: underline;
     text-underline-offset: 0.25rem;
-}
+} */
 
 h1 {
     font-weight: 400;

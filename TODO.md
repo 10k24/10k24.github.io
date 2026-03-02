@@ -10,6 +10,7 @@
 - [ ] initial 3 project pages w/ cover only + hide project pages
 - [ ] initial 3 project pages filled out
 - [ ] Bring back full sitemap
+- [ ] Add feed.xml
 
 ## Features
 

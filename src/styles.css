@@ -32,10 +32,10 @@ a {
 }
 
 /* TODO: bring back once project pages are added */
-/* a:hover {
+a:hover {
     text-decoration: underline;
     text-underline-offset: 0.25rem;
-} */
+}
 
 h1 {
     font-weight: 400;
@@ -143,9 +143,9 @@ h3.project-title {
     text-decoration: none;
 }
 
-h3.project-title:hover {
+/* h3.project-title:hover {
     text-decoration: underline;
-}
+} */
 
 p.project-meta {
     color: #808080;

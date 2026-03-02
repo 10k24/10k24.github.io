@@ -33,12 +33,6 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("src/CNAME");
 
-    eleventyConfig.ignores.add("src/projects/**");
-
-    // TODO:
-    // - robots.txt
-    // - feed.xml
-
     eleventyConfig.setLiquidOptions({
         jsTruthy: true
     });

@@ -9,7 +9,7 @@ openGraphImage: "/img/opengraph.png"
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{description}}">
-    <meta name="author" content="{{metadata.author}}">
+    <meta name="author" content="{{metadata.author.name}}">
 
     <meta property="og:url" content="{{metadata.baseURL}}{{page.url}}" />
     <meta property="og:title" content="{{metadata.longname}} | {{title}}" />
@@ -59,7 +59,7 @@ openGraphImage: "/img/opengraph.png"
                 <a href="/about"></a>
             </div> -->
             <div class="nav-item">
-                <a href="mailto:info@10k24.com">Email Us</a>
+                <a href="mailto:{{metadata.author.email}}">Email Us</a>
             </div>
         </nav>
     </header>
@@ -67,11 +67,11 @@ openGraphImage: "/img/opengraph.png"
         {{ content }}
     </main>
     <footer>
-        <p>&copy; <script>document.write((new Date()).getFullYear());</script> {{metadata.author}}.</p>
+        <p>&copy; <script>document.write((new Date()).getFullYear());</script> {{metadata.longname}}.</p>
         <div class="footer-links">
             <p><a href="https://github.com/10k24" target=_blank>GitHub</a></p>
             <p><a href="https://instagram.com/10k24.studio" target=_blank>Instagram</a></p>
-            <p><a href="mailto:info@10k24.com">info@10k24.com</a></p>
+            <p><a href="mailto:{{metadata.author.email}}">{{metadata.author.email}}</a></p>
         </div>
     </footer>
     <!-- Google tag (gtag.js) -->

@@ -71,6 +71,11 @@ header, nav, footer, .footer-links {
 .nav-item > a, .footer-links > a {
     text-align: right;
     margin-left: 2rem;
+    padding: 0.5rem;
+    min-height: 44px;
+    min-width: 44px;
+    /* display: inline-flex;
+    align-items: center; */
 }
 
 
@@ -188,6 +193,19 @@ canvas {
         margin: 1rem 2rem;
     }
 
+    /* header {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        margin-top: 1rem;
+    }
+
+    .nav-item > a {
+        padding: 0.75rem;
+        font-size: 1.1rem;
+    } */
+
     footer {
         flex-direction: column-reverse;
 
@@ -222,7 +240,8 @@ canvas {
     .footer-links > a {
         text-align: left;
         margin-left: 0rem;
-        margin-right: 1rem;
+        /* margin-right: 1rem; */
+        padding: 1rem;
     }
 
     .full-width {

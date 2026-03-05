@@ -235,13 +235,16 @@ canvas {
     }
 
     /* TODO: uncomment once mobile menu is built */
-
     /* .nav-item > a, */
     .footer-links > a {
-        /* margin-right: 1rem; */
-        padding: 1rem;
+        padding: 0;
         margin-left: 0;
         text-align: left;
+        min-height: 28px;
+    }
+
+    .footer-links {
+        flex-direction: column;
     }
 
     .full-width {

@@ -2,7 +2,8 @@
 package-lock.json
 
 # temporary workaround
-docs/projects
+docs/projects/*/index.html
+docs/projects/index.html
 
 .DS_Store
 

@@ -37,7 +37,7 @@ function processSketchFile(filePath) {
 }
 
 // Find all sketch files in docs output
-const sketchPattern = '/Users/shakeelmohamed/work/git/10k24.github.io/docs/projects/**/*.js';
+const sketchPattern = './docs/projects/**/*.js';
 const sketchFiles = glob.sync(sketchPattern, {
   ignore: '**/node_modules/**'
 });

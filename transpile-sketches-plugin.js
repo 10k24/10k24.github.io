@@ -4,11 +4,31 @@ const p5Globals = require('./p5-globals.js');
 
 /**
  * Eleventy plugin to transpile p5.js sketches from global mode to instance mode
- * Runs after build is complete
+ * Handles JS files intelligently:
+ * - Detects p5 sketches (has setup() and draw() functions)
+ * - Transpiles p5 sketches to instance mode
+ * - Passes through non-p5 JS files unchanged
  */
 
-function transpileSketch(sourceCode) {
+/**
+ * Detect if a JS file is a p5 sketch
+ * @param {string} sourceCode - The JS source code
+ * @returns {boolean} true if it's a p5 sketch
+ */
+function isP5Sketch(sourceCode) {
+  // Look for setup() and draw() function definitions
+  const hasSetup = /function\s+setup\s*\(\s*\)/.test(sourceCode);
+  const hasDraw = /function\s+draw\s*\(\s*\)/.test(sourceCode);
+  
+  return hasSetup && hasDraw;
+}
+
+function transpileSketch(sourceCode, sketchPath) {
   let transformed = sourceCode;
+
+  // Generate simple ID from just the filename for the base sketch function
+  const filename = sketchPath.split('/').pop().replace(/\.js$/, '');
+  const sketchId = filename;
 
   // Fix window.windowWidth/Height - should be p5 properties
   transformed = transformed.replace(/window\.(windowWidth|windowHeight)/g, '$1');
@@ -68,8 +88,9 @@ function transpileSketch(sourceCode) {
     .map(constant => `  const ${constant} = p.${constant};`)
     .join('\n');
 
-  // Wrap in instance mode function with aliases
-  const wrapped = `const sketchFunction = function(p) {
+  // Store the sketch function directly in window.sketches
+  const wrapped = `window.sketches = window.sketches || {};
+window.sketches['${sketchId}'] = function(p) {
 ${functionAliases}
 ${constantAliases}
 
@@ -88,34 +109,58 @@ function walkDir(dir, callback) {
     
     if (stat.isDirectory()) {
       walkDir(filepath, callback);
-    } else if (file.endsWith('.js') && !file.includes('transpile') && !file.includes('p5-globals')) {
+    } else if (file.endsWith('.js')) {
       callback(filepath);
     }
   });
 }
 
 module.exports = function(eleventyConfig) {
+  // Remove .js from template formats - we'll handle it manually
+  eleventyConfig.ignores.add("**/*.js");
+  
+  // Custom JS file handling
   eleventyConfig.on('eleventy.after', () => {
-    const docsPath = path.join(__dirname, 'docs', 'projects');
+    const srcPath = path.join(__dirname, 'src');
+    const docsPath = path.join(__dirname, 'docs');
     
-    if (!fs.existsSync(docsPath)) {
+    if (!fs.existsSync(srcPath)) {
       return;
     }
 
-    walkDir(docsPath, (filePath) => {
+    // Process all JS files in src
+    walkDir(srcPath, (srcFilePath) => {
+      // Skip plugin files and node_modules
+      if (srcFilePath.includes('node_modules') || 
+          srcFilePath.includes('transpile') || 
+          srcFilePath.includes('p5-globals')) {
+        return;
+      }
+
       try {
-        const source = fs.readFileSync(filePath, 'utf8');
+        const source = fs.readFileSync(srcFilePath, 'utf8');
+        const relativePath = path.relative(srcPath, srcFilePath);
+        const destPath = path.join(docsPath, relativePath);
         
-        // Skip files that are already transpiled
-        if (source.includes('const sketchFunction = function(p)')) {
-          return;
+        // Ensure destination directory exists
+        const destDir = path.dirname(destPath);
+        if (!fs.existsSync(destDir)) {
+          fs.mkdirSync(destDir, { recursive: true });
         }
 
-        const transpiled = transpileSketch(source);
-        fs.writeFileSync(filePath, transpiled, 'utf8');
-        console.log(`✓ Transpiled sketch: ${path.relative(__dirname, filePath)}`);
+        // Check if it's a p5 sketch
+        if (isP5Sketch(source)) {
+          // Transpile p5 sketches
+          const transpiled = transpileSketch(source, relativePath);
+          fs.writeFileSync(destPath, transpiled, 'utf8');
+          console.log(`✓ Transpiled p5 sketch: ${relativePath}`);
+        } else {
+          // Passthrough copy non-p5 JS files
+          fs.copyFileSync(srcFilePath, destPath);
+          console.log(`✓ Copied JS file: ${relativePath}`);
+        }
       } catch (err) {
-        console.error(`✗ Error transpiling ${filePath}:`, err.message);
+        console.error(`✗ Error processing ${srcFilePath}:`, err.message);
       }
     });
   });

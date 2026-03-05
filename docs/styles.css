@@ -1,4 +1,4 @@
-@keyframes fadeIn {
+@keyframes fade-in {
     from {
         opacity: 0;
     }
@@ -14,16 +14,14 @@
 }
 
 body {
-    background-color: #000000;
-    color: #FFFFFF;
-    font-family: adelle-mono, monospace;
-    font-weight: 400;
-
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
     margin: 2rem 4rem;
+    font-family: adelle-mono, monospace;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #000000;
 }
 
 a {
@@ -38,14 +36,14 @@ a:hover {
 }
 
 h1 {
-    font-weight: 400;
-    font-size: 2.8rem;
     margin-bottom: 3.6rem;
+    font-size: 2.8rem;
+    font-weight: 400;
 }
 
 h2 {
-    font-weight: 400;
     font-size: 2.4rem;
+    font-weight: 400;
 }
 
 p {
@@ -69,11 +67,12 @@ header, nav, footer, .footer-links {
 }
 
 .nav-item > a, .footer-links > a {
-    text-align: right;
-    margin-left: 2rem;
-    padding: 0.5rem;
-    min-height: 44px;
     min-width: 44px;
+    min-height: 44px;
+    padding: 0.5rem;
+    margin-left: 2rem;
+    text-align: right;
+
     /* display: inline-flex;
     align-items: center; */
 }
@@ -91,23 +90,23 @@ header, nav, footer, .footer-links {
 .tagline {
     font-size: 2rem;
     line-height: 2.8rem;
-
     opacity: 0;
-    /* animation: fadeIn 2s ease-in forwards; */
-    animation: fadeIn 1.5s cubic-bezier(.55,.1,.9,.55) forwards;
+
+    /* animation: fade-in 2s ease-in forwards; */
+    animation: fade-in 1.5s cubic-bezier(.55,.1,.9,.55) forwards;
 }
 
 section {
-    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    width: 100%;
 }
 
 .hero {
-    margin-top: -4rem;
     min-height: 100vh;
+    margin-top: -4rem;
 }
 
 .hero .hero-logo {
@@ -129,11 +128,11 @@ footer {
 }
 
 .og-scale {
-    aspect-ratio: 1200/630;
     width: 100%;
+    aspect-ratio: 1200/630;
 }
 
-.project-list {}
+/* .project-list {} */
 
 .project-list-item {
     width: 100%;
@@ -146,10 +145,10 @@ footer {
 }
 
 h3.project-title {
-    font-weight: bold;
-    font-size: 1.75rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    font-size: 1.75rem;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -158,9 +157,9 @@ h3.project-title {
 } */
 
 p.project-meta {
-    color: #808080;
     margin-top: 0.125rem;
     margin-bottom: 0.125rem;
+    color: #808080;
 }
 
 .project-header {
@@ -181,9 +180,9 @@ img {
 }
 
 canvas {
-    margin: auto auto;
-    padding: 2rem;
     display: block;
+    padding: 2rem;
+    margin: auto;
 }
 
 
@@ -220,15 +219,15 @@ canvas {
     }
 
     h3.project-title {
+        margin-bottom: 0.25rem;
         font-size: 1.25rem;
         line-height: 1.75rem;
-        margin-bottom: 0.25rem;
     }
 
     p.project-meta {
-        line-height: 1.25rem;
-        font-size: 0.8rem;
         margin: 0;
+        font-size: 0.8rem;
+        line-height: 1.25rem;
     }
 
     .hero .hero-logo {
@@ -236,18 +235,19 @@ canvas {
     }
 
     /* TODO: uncomment once mobile menu is built */
+
     /* .nav-item > a, */
     .footer-links > a {
-        text-align: left;
-        margin-left: 0rem;
         /* margin-right: 1rem; */
         padding: 1rem;
+        margin-left: 0;
+        text-align: left;
     }
 
     .full-width {
         width: 100vw;
-        margin-left: -2rem;
         margin-right: -2rem;
+        margin-left: -2rem;
     }
 
 
@@ -257,9 +257,9 @@ canvas {
     }
 
     .tagline {
+        padding: 1rem;
         font-size: 1.5rem;
         line-height: 2.1rem;
-        padding: 1rem;
     }
 
     .mobile-only {

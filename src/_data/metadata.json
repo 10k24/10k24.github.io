@@ -1,0 +1,14 @@
+{
+    "baseURL": "https://10k24.com",
+    "shortname": "10k24",
+    "studioname": "10k24 Studio",
+    "longname": "TEN THOUSAND IDEAS, TWENTY-FOUR HOURS",
+    "author": {
+        "name": "TEN THOUSAND IDEAS, TWENTY-FOUR HOURS",
+        "email": "info@10k24.com"
+    },
+    "social": {
+        "LinkedIn": "https://www.linkedin.com/company/10k24/",
+        "Instagram": "https://instagram.com/10k24.studio"
+    }
+}

@@ -1,6 +1,11 @@
 # We use Bun
 package-lock.json
 
+# temporary workaround
+docs/projects
+
+.DS_Store
+
 # Logs
 logs
 *.log

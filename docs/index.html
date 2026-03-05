@@ -1,44 +1,187 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>10k24 Studio | Home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A computing / creativity / collaboration studio based in Los Angeles">
+    <meta name="author" content="TEN THOUSAND IDEAS, TWENTY-FOUR HOURS">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://10k24.com/">
+
+    <meta property="og:url" content="https://10k24.com/" />
+    <meta property="og:title" content="10k24 Studio | Home" />
+    <meta property="og:image" content="https://10k24.com/img/opengraph.png" />
+    <meta property="og:description" content="A computing / creativity / collaboration studio based in Los Angeles" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="10k24 Studio" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="10k24 Studio | Home" />
+    <meta name="twitter:description" content="A computing / creativity / collaboration studio based in Los Angeles" />
+    <meta name="twitter:image" content="https://10k24.com/img/opengraph.png" />
+
     <link rel="stylesheet" href="https://use.typekit.net/rli7dce.css">
-    <link rel="stylesheet" href="./styles.css">
-    <!-- TODO: favicon -->
-    <!-- TODO: meta -->
-    <!-- TODO: og -->
-    <title>TEN THOUSAND IDEAS, TWENTY-FOUR HOURS</title>
+    <link rel="stylesheet" href="/styles.css">
+
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="10k24" />
+    <link rel="manifest" href="/img/site.webmanifest" />
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "10k24 Studio",
+        "url": "https://10k24.com",
+        "description": "",
+        "sameAs": [
+            "https://github.com/10k24",
+            "https://instagram.com/10k24.studio"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "info@10k24.com",
+            "contactType": "general"
+        }
+    }
+    </script>
+    
+    
+    <!-- Single sketch mode: load p5.js once -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+    
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPZFEJK5BG"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-CPZFEJK5BG');
-</script>
-
 <body>
     <header>
-        <h1 class="center">TEN THOUSAND IDEAS<br> TWENTY-FOUR HOURS</h1>
+        <div class="header-logo">
+            <a href="/">
+                <img class="header-logo" src="/img/10k24_shortform_logo.svg" draggable="false" />
+            </a>
+        </div>
+        <nav>
+            <!-- <div class="nav-item">
+                <a href="/">Home</a>
+            </div> -->
+            <!-- <div class="nav-item">
+                <a href="/projects">Projects</a>
+            </div> -->
+            <!-- <div class="nav-item">
+                <a href="/ideas"></a>
+            </div>
+            <div class="nav-item">
+                <a href="/about"></a>
+            </div> -->
+            <div class="nav-item">
+                <a href="mailto:info@10k24.com">Email Us</a>
+            </div>
+        </nav>
     </header>
     <main>
         
-<div>
-    <div>
-        <!-- <p>Project 1</p> -->
-    </div>
-    <div>
-        <!-- <p>Project 2</p> -->
-    </div>
+<section class="hero">
+    <!-- TODO: this should be perfectly vertically centered -->
+    <a href="#projects"> 
+        <img class="hero-logo" draggable="false" src="/img/10k24_longform_logo.svg" />
+    </a>
+</section>
+<div class="tagline-wrap">
+    <h1 class="center tagline">A computing / creativity / collaboration studio based in Los Angeles</h1>
+</div>
+<div class="project-list" id="projects">
+        <div class="project-list-item">
+            <!-- <a href="/projects/words-have-power/"> -->
+    <img class="og-scale" src="/projects/words-have-power/WHP_gif.webp" alt="Words Have Power Installation cover image" />
+    <h3 class="project-title">Words Have Power Installation</h3>
+<!-- </a> -->
+<!-- <p class="project-meta">Los Angeles, CA</p> -->
+<p class="project-meta">Projection Mapping, Installation, Generative Art</p>
+        </div>
+        <div class="project-list-item">
+            <!-- <a href="/projects/processing-native/"> -->
+    <img class="og-scale" src="/projects/processing-native/cover.png" alt="Processing Native cover image" />
+    <h3 class="project-title">Processing Native</h3>
+<!-- </a> -->
+<!-- <p class="project-meta">Los Angeles, CA</p> -->
+<p class="project-meta">Software Engineering</p>
+        </div>
+        <div class="project-list-item">
+            <!-- <a href="/projects/clock/"> -->
+    <img class="og-scale" src="/projects/clock/cover.png" alt="Clocks cover image" />
+    <h3 class="project-title">Clocks</h3>
+<!-- </a> -->
+<!-- <p class="project-meta">Los Angeles, CA</p> -->
+<p class="project-meta">Creative Coding</p>
+        </div>
 </div>
     </main>
     <footer>
-        <p><b>INSTAGRAM</b> <a href="https://instagram.com/10k24.studio" target=_blank>@10k24.studio</a></p>
         <p>&copy; <script>document.write((new Date()).getFullYear());</script> 10k24 Studio.</p>
+        <div class="footer-links">
+            <a href="https://instagram.com/10k24.studio" target=_blank>Instagram</a>
+            <a href="https://github.com/10k24" target=_blank>GitHub</a>
+            <a href="mailto:info@10k24.com">info@10k24.com</a>
+        </div>
     </footer>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPZFEJK5BG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-CPZFEJK5BG');
+    </script>
+    <script>
+        // Load unique sketch scripts and instantiate all p5 sketches
+        window.sketches = window.sketches || {};
+        
+        const containers = document.querySelectorAll('[data-sketch-file]');
+        const uniqueSources = new Set();
+        
+        // Collect unique sketch sources
+        containers.forEach(function(container) {
+            const src = container.dataset.sketchSrc;
+            if (src) uniqueSources.add(src);
+        });
+        
+        // Load scripts sequentially
+        let loadPromise = Promise.resolve();
+        uniqueSources.forEach(function(src) {
+            loadPromise = loadPromise.then(function() {
+                return new Promise(function(resolve) {
+                    const script = document.createElement('script');
+                    script.src = src;
+                    script.onload = resolve;
+                    document.body.appendChild(script);
+                });
+            });
+        });
+        
+        // After all scripts loaded, instantiate sketches
+        loadPromise.then(function() {
+            containers.forEach(function(container) {
+                const sketchFile = container.dataset.sketchFile;
+                const containerId = sketchFile + '-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+                container.id = containerId;
+                if (window.sketches[sketchFile]) {
+                    window.sketches[containerId] = window.sketches[sketchFile];
+                }
+            });
+            
+            for (let s of Object.keys(window.sketches)) {
+                if (document.getElementById(s)) {
+                    new p5(window.sketches[s], s);
+                }
+            }
+        });
+    </script>
 </body>
 </html>

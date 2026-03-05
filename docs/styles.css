@@ -1,28 +1,53 @@
-body {
-    background-color: #000000;
-    color: #FFFFFF;
-    font-family: adelle-mono, monospace;
-    font-weight: 400;
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
 
+.square-p5-container {
+    max-height: 100vh;
+    margin: 4rem auto;
+}
+
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
-    margin: 0 2rem;
+    margin: 2rem 4rem;
+    font-family: adelle-mono, monospace;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #000000;
 }
 
 a {
     color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* TODO: bring back once project pages are added */
+a:hover {
     text-decoration: underline;
     text-underline-offset: 0.25rem;
 }
 
-a:hover {
-    color: #C7C7C7;
+h1 {
+    margin-bottom: 3.6rem;
+    font-size: 2.8rem;
+    font-weight: 400;
 }
 
-h1 {
+h2 {
+    font-size: 2.4rem;
     font-weight: 400;
+}
+
+p {
+    line-height: 1.6rem;
 }
 
 .center {
@@ -30,7 +55,68 @@ h1 {
 }
 
 header {
+    z-index: 999;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
 
+header, nav, footer, .footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-item > a, .footer-links > a {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.5rem;
+    margin-left: 2rem;
+    text-align: right;
+
+    /* display: inline-flex;
+    align-items: center; */
+}
+
+
+.header-logo {
+    height: 1rem;
+}
+
+.tagline-wrap {
+    width: 75vw;
+    margin: 0 auto;
+}
+
+.tagline {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    opacity: 0;
+
+    /* animation: fade-in 2s ease-in forwards; */
+    animation: fade-in 1.5s cubic-bezier(.55,.1,.9,.55) forwards;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero {
+    min-height: 100vh;
+    margin-top: -4rem;
+}
+
+.hero .hero-logo {
+    width: 75vw;
+    height: auto;
+    margin: 8rem auto;
+}
+
+.half-height {
+    min-height: 50vh;
 }
 
 main {
@@ -38,16 +124,152 @@ main {
 }
 
 footer {
-
+    margin-top: 4rem;
 }
+
+.og-scale {
+    width: 100%;
+    aspect-ratio: 1200/630;
+}
+
+/* .project-list {} */
+
+.project-list-item {
+    width: 100%;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+.project-list-item a {
+    text-decoration: none;
+}
+
+h3.project-title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* h3.project-title:hover {
+    text-decoration: underline;
+} */
+
+p.project-meta {
+    margin-top: 0.125rem;
+    margin-bottom: 0.125rem;
+    color: #808080;
+}
+
+.project-header {
+    margin-bottom: 4rem;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+canvas {
+    display: block;
+    padding: 2rem;
+    margin: auto;
+}
+
 
 /* TODO: responsive font sizes */
 @media only screen and (max-width: 860px) {
     body {
+        margin: 1rem 2rem;
+    }
+
+    /* header {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        margin-top: 1rem;
+    }
+
+    .nav-item > a {
+        padding: 0.75rem;
+        font-size: 1.1rem;
+    } */
+
+    footer {
+        flex-direction: column-reverse;
+
+    }
+
+    p {
         font-size: 0.9rem;
     }
 
     h1 {
         font-size: 1.5rem;
+    }
+
+    h3.project-title {
+        margin-bottom: 0.25rem;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+
+    p.project-meta {
+        margin: 0;
+        font-size: 0.8rem;
+        line-height: 1.25rem;
+    }
+
+    .hero .hero-logo {
+        width: 100vw;
+    }
+
+    /* TODO: uncomment once mobile menu is built */
+    /* .nav-item > a, */
+    .footer-links > a {
+        padding: 0;
+        margin-left: 0;
+        text-align: left;
+        min-height: 28px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .full-width {
+        width: 100vw;
+        margin-right: -2rem;
+        margin-left: -2rem;
+    }
+
+
+    .tagline-wrap {
+        width: 100vw;
+        margin: 0 -2rem;
+    }
+
+    .tagline {
+        padding: 1rem;
+        font-size: 1.5rem;
+        line-height: 2.1rem;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+    
+    .desktop-only {
+        display: none;
     }
 }

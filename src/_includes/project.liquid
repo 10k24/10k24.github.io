@@ -1,0 +1,22 @@
+---
+layout: base
+---
+
+<div class="project-header">
+    <!-- TODO: figure out how to resolve cover img/gif, OG, this header; maybe on-hover of each -->
+    <!-- TODO: error if such file is missing -->
+    {% if hideCover != true %}
+        <img class="og-scale" src="./{{cover}}" alt="{{title}} cover image" />
+    {% endif %}
+    {% if altCover != null %}
+        {% include "./{{ page.url }}{{altCover}}" %}
+    {% endif %}
+    
+    <h1>{{title}}</h2>
+    <p class="project-meta">{{location}}</p>
+    <p class="project-meta">{{media}}</p>
+</div>
+
+<div>
+    {{ content }}
+</div>

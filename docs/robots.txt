@@ -2,5 +2,6 @@ User-agent: *
 Disallow: *.json
 Disallow: *.md
 Disallow: /src
+Disallow: /projects
 
 Sitemap: https://www.10k24.com/sitemap.txt

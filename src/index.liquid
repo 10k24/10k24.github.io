@@ -1,13 +1,22 @@
 ---
 title: "Home"
 layout: base
+description: "A computing / creativity / collaboration studio based in Los Angeles"
 ---
 
-<div>
-    <div>
-        <!-- <p>Project 1</p> -->
-    </div>
-    <div>
-        <!-- <p>Project 2</p> -->
-    </div>
+<section class="hero">
+    <!-- TODO: this should be perfectly vertically centered -->
+    <a href="#projects"> 
+        <img class="hero-logo" draggable="false" src="/img/10k24_longform_logo.svg" />
+    </a>
+</section>
+<div class="tagline-wrap">
+    <h1 class="center tagline">A computing / creativity / collaboration studio based in Los Angeles</h1>
+</div>
+<div class="project-list" id="projects">
+    {%- for project in collections.projects -%}
+        <div class="project-list-item">
+            {% include "_includes/partials/project-item" %}
+        </div>
+    {%- endfor -%}
 </div>

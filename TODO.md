@@ -3,7 +3,6 @@
 
 # MVP launch
 
-- [X] mobile layout
 - [ ] Revised logo
 - [ ] services on home page
 - [ ] 404 page

@@ -50,7 +50,9 @@ What would that look like in practice? Something like this:
     - Guest can browse and book.
     - User can manage their schedule.
     - Admin can change anything.
-    Plain sentences. But structured — subject, verb, object. The compiler can check these. If a behavior references an entity that doesn’t exist, it’s an error. If an actor has no behaviors, it’s an error. You can’t generate the prompt until the spec is clean.
+    Plain sentences. But structured — subject, verb, object.
+
+The compiler can check these. If a behavior references an entity that doesn’t exist, it’s an error. If an actor has no behaviors, it’s an error. You can’t generate the prompt until the spec is clean.
 
 That last part is the key. The prompt button is disabled until every loose end is resolved. The AI only ever sees a valid spec. The output becomes predictable — not because the AI got smarter, but because the input becomes precise.
 

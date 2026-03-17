@@ -134,7 +134,7 @@ footer {
 
 /* .project-list {} */
 
-.project-list-item {
+.project-list-item, .idea-list-item {
     width: 100%;
     margin-top: 8rem;
     margin-bottom: 8rem;
@@ -144,7 +144,7 @@ footer {
     text-decoration: none;
 }
 
-h3.project-title {
+h3.project-title, h3.idea-title {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 1.75rem;
@@ -156,7 +156,7 @@ h3.project-title {
     text-decoration: underline;
 } */
 
-p.project-meta {
+p.project-meta, p.idea-meta {
     margin-top: 0.125rem;
     margin-bottom: 0.125rem;
     color: #808080;
@@ -218,13 +218,13 @@ canvas {
         font-size: 1.5rem;
     }
 
-    h3.project-title {
+    h3.project-title, h3.idea-title {
         margin-bottom: 0.25rem;
         font-size: 1.25rem;
         line-height: 1.75rem;
     }
 
-    p.project-meta {
+    p.project-meta, p.idea-meta {
         margin: 0;
         font-size: 0.8rem;
         line-height: 1.25rem;

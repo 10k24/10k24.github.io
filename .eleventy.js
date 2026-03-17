@@ -11,6 +11,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.setTemplateFormats([
         "liquid",
+        "md",
 
         "css",
         

@@ -26,6 +26,13 @@ My whole life I was plagued with wanting to do 10x more than possible with my gi
 
 [insert something about Outliers by Malcolm Gladwell; 10 thousand hours to mastery]
 
+[I got an MFA In GD but ever intended to be a GD by title. My peers never understood what that meant. My MFA thesis was pushing back against arbitrary constraints no one seemed to question. An article I read stated there are“only 4 career paths” in graphic design. I crashed out when I saw that. I was so inspired by Virgil I because I was already as fluid as he was. 20 disciplines, but consistent intention always]
+
+
+<!-- LOGOTYPE HERE -->
+<!-- TEN THOUSAND IDEAS -->
+<!-- TWENTY-FOUR HOURS -->
+
 We all have the same 24 hours, how will you spend yours?
 
 With gratitude,

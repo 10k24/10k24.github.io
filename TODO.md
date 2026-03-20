@@ -3,7 +3,6 @@
 
 # MVP launch
 
-- [ ] Revised logo
 - [ ] services on home page
 - [ ] 404 page
 - [ ] initial 3 project pages w/ cover only + hide project pages
@@ -12,7 +11,6 @@
 - [ ] initial 3 project pages filled out
 - [ ] Bring back full sitemap
 - [ ] Add feed.xml
-- [ ] Body style in TT Commons
 - [ ] Studio page
 
 ## Features
@@ -39,6 +37,10 @@
 - [ ] Animated favicon, see https://github.com/stefanjudis/animated-svg-favicon/blob/master/index.html
 - [ ] icons: https://github.com/feathericons/feather/tree/main
 
+## Other inspo for a richer experience
+
+- [ ] Smooth scrolling but less sticky (implement w/o react): https://www.lenis.dev/
+- [ ] Tech agency with attitude in copy and design: https://darkroom.engineering/
 
 ===
 

@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setInputDirectory("src");
     eleventyConfig.setOutputDirectory("docs");
     eleventyConfig.ignores.add("**/cover.liquid");
+    eleventyConfig.ignores.add("**/ideas");
 
     eleventyConfig.setTemplateFormats([
         "liquid",

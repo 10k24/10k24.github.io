@@ -5,6 +5,9 @@
 
 - [ ] services on home page
 - [ ] 404 page
+- [ ] ideas list page
+- [ ] idea individual pages (obv with coherent thoughts)
+- [ ] for ideas pages, generate og images at build time - see: https://github.com/vercel/satori#documentation
 - [ ] initial 3 project pages w/ cover only + hide project pages
 - [ ] mobile menu
 - [ ] Services page

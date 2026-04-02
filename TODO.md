@@ -20,7 +20,9 @@
 ## Features
 
 - [ ] components for project, metadata, etc?
-- [ ] move ideas into this repo, maybe under a tools section: https://github.com/smideas/smideas.github.io/blob/main/index.html
+- [ ] move idea generator into this repo, maybe under a tools section: https://github.com/smideas/smideas.github.io/blob/main/index.html
+   - [ ] reference: https://shouldideploy.today/
+   - [ ] Need a new name for it though since ideas = blog posts now
 - [ ] other tools like icebreaker generator: https://github.com/facesfromplaces/facesfromplaces.github.io
 - [ ] Syntax highlighting plugin: https://www.11ty.dev/docs/plugins/syntaxhighlight/
 

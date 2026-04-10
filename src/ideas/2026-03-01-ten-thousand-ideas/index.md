@@ -16,6 +16,8 @@ What was once an email or a few bullet points is now hundreds of lines of code, 
 
 In any moment we can only truly focus on one thing, so what do we do when one thought now carries a day’s worth of context?
 
+<!-- you've always been someone who operates across disciplines, the industry kept telling you to pick one, and 10k24 is the structure that finally lets you stop pretending that's a problem. -->
+
 Return to the Paradox of Choice.
 
 Until recently I felt at odds with the desire to focus deeply and being inspired by new possibilities. The dance between the two has defined my career.
@@ -23,6 +25,8 @@ Until recently I felt at odds with the desire to focus deeply and being inspired
 I’m writing this on March 19, 2026. About four months ago I came up with the name for 10k24. It came over me in an instant. Sometimes thoughts are so profound, you cannot ignore them.
 
 My whole life I was plagued with wanting to do 10x more than possible with my given constraints.
+
+<!--  the Gladwell reference and the MFA/Virgil section — are the emotional core. The "only 4 career paths" moment and crashing out is a great story beat. I'd write that out fully and let it breathe. The Gladwell reference can be lighter — you don't need to explain the 10,000 hours concept, just nod at it since it's embedded in the name. -->
 
 [insert something about Outliers by Malcolm Gladwell; 10 thousand hours to mastery]
 

@@ -6,8 +6,10 @@ description: "A computing / creativity / collaboration studio based in Los Angel
 
 <div class="idea-list" id="ideas">
     {%- for idea in collections.ideas -%}
-        <div class="idea-list-item">
-            {% include "_includes/partials/idea-item" %}
-        </div>
+        {% if idea.data.visible %}
+            <div class="idea-list-item">
+                {% include "_includes/partials/idea-item" %}
+            </div>
+        {% endif %}
     {%- endfor -%}
 </div>

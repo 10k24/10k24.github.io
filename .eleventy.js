@@ -8,7 +8,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setInputDirectory("src");
     eleventyConfig.setOutputDirectory("docs");
     eleventyConfig.ignores.add("**/cover.liquid");
-    eleventyConfig.ignores.add("**/ideas");
+    // eleventyConfig.ignores.add("**/ideas");
 
     eleventyConfig.setTemplateFormats([
         "liquid",
@@ -37,6 +37,11 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.setLiquidOptions({
         jsTruthy: true
+    });
+
+    eleventyConfig.addFilter("isNotHidden", (page) => {
+        const folder = page.page.inputPath.split('/').slice(0, -1).pop();
+        return !folder.startsWith('_');
     });
 
     const options = {

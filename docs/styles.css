@@ -55,6 +55,11 @@ p {
     line-height: 1.6rem;
 }
 
+blockquote {
+    color: #808080;
+    margin-inline-start: 1rem;
+}
+
 .center {
     text-align: center;
 }

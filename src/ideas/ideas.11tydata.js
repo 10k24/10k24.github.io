@@ -7,6 +7,11 @@ module.exports = {
         ISODate: data => {
             if (!data.date) return '';
             return data.date.toISOString().split("T")[0];
+        },
+        visible: data => {
+            const visible = data.page.inputPath.match(/^\.\/src\/ideas\/_/);
+            console.log(data.page.inputPath, !visible);
+            return !visible;
         }
     }
 };

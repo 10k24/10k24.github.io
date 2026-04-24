@@ -14,6 +14,8 @@
 - [ ] Bring back full sitemap
 - [ ] Add feed.xml
 - [ ] Studio + services page, basically show credibility
+- [ ] write .github/profile/README file with similar content as above, but shorter;
+   - [ ] probably need some infographic for the 3 pillars: Creativity, Computing, Collaboration
 
 ## Features
 

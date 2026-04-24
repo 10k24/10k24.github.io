@@ -1,9 +1,11 @@
 ---
 title: "Ten Thousand Ideas"
 layout: idea
-description: "Hello World. Welcome to 10k24."
+description: "Hello World, welcome to 10k24."
 tags: ideas
 ---
+
+This is the first one.
 
 Before AI, we might hoard notebooks or Trello boards of ideas hoping one day we might get to execute on one of them. Maybe one of those ideas could make us rich. It’s just something we did naturally as creative or tech adjacent people.
 

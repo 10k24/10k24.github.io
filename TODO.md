@@ -1,6 +1,5 @@
 # TODO
 
-
 # MVP launch
 
 - [ ] services on home page
@@ -11,11 +10,10 @@
 - [ ] Workflow - each new project (especially the technical ones), get 2 posts: project page and idea/blog page announcing it. That then gets pushed to socials, etc. Tight workflow, ans should help with SEO
 - [ ] initial 3 project pages w/ cover only + hide project pages
 - [ ] mobile menu
-- [ ] Services page
 - [ ] initial 3 project pages filled out
 - [ ] Bring back full sitemap
 - [ ] Add feed.xml
-- [ ] Studio page
+- [ ] Studio + services page, basically show credibility
 
 ## Features
 

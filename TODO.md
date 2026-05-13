@@ -2,6 +2,7 @@
 
 # MVP launch
 
+- [ ] Lead/intake form (typeform)
 - [ ] services on home page
 - [ ] 404 page
 - [ ] ideas list page

@@ -3,12 +3,12 @@
 # MVP launch
 
 - [ ] Lead/intake form (typeform)
-- [ ] services on home page
+- [ ] services on home page -- DO NOT use the word “brand” for its negative historical meanings, and maybe even include a statement about why
 - [ ] 404 page
 - [ ] ideas list page
 - [ ] idea individual pages (obv with coherent thoughts)
 - [ ] for ideas pages, generate og images at build time - see: https://github.com/vercel/satori#documentation
-- [ ] Workflow - each new project (especially the technical ones), get 2 posts: project page and idea/blog page announcing it. That then gets pushed to socials, etc. Tight workflow, ans should help with SEO
+- [ ] Workflow - each new project (especially the technical ones), get 2 posts: project page and idea/blog page announcing it. That then gets pushed to socials, etc. Tight workflow, and should help with SEO
 - [ ] initial 3 project pages w/ cover only + hide project pages
 - [ ] mobile menu
 - [ ] initial 3 project pages filled out

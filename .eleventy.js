@@ -44,6 +44,11 @@ module.exports = function (eleventyConfig) {
         return !folder.startsWith('_');
     });
 
+    eleventyConfig.addShortcode("emailLink", function(email) {
+        const display = email.replace("@", '<span class="alt-at">@</span>');
+        return `<a href="mailto:${email}">${display}</a>`;
+    });
+
     const options = {
         root: ["./src"],
         extname: ".liquid",

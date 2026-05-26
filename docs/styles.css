@@ -8,6 +8,10 @@
     }
 }
 
+.alt-at {
+    font-feature-settings: "case" 1;
+}
+
 .square-p5-container {
     max-height: 100vh;
     margin: 4rem auto;

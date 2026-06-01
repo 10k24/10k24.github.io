@@ -2,7 +2,8 @@
 
 # MVP launch
 
-- [ ] Lead/intake form (typeform)
+- [X] Lead/intake form: context paragraph at the top
+- [X] Lottie file header animation
 - [ ] services on home page -- DO NOT use the word “brand” for its negative historical meanings, and maybe even include a statement about why
 - [ ] 404 page
 - [ ] ideas list page
@@ -40,6 +41,7 @@
 ## Future ideas
 
 - [ ] Consider moving to Cloudflare Pages: https://pages.cloudflare.com/
+- [ ] Explore really rich shader UI experience: https://storytelling.noomoagency.com/
 - [ ] Add shop link once products are listed https://shop.10k24.com
 - [ ] more custom CSS easing: https://cubic-bezier.com/
 - [ ] Animated favicon, see https://github.com/stefanjudis/animated-svg-favicon/blob/master/index.html
@@ -63,5 +65,5 @@ Brand systems for cultural organizations and startups
 
 Recent work: International festival reaching 1M+ people across 21 countries, luxury interiors brand, wellness expansion, consumer tech launch."
 About page (KPI story):
-"Founded by Shakeel Mohamed, 10k24 combines 6 years of enterprise software engineering with graduate-level design training to create brand systems that work at scale.
+"Founded by Shakeel Mohamed, 10k24 combines 10 years of software engineering across developer tools, performance with graduate-level design training to create brand systems that work at scale.
 Our approach: Technical rigor meets design intention. We build tools, not just deliverables."

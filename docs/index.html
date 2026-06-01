@@ -89,15 +89,23 @@
         
 <section class="hero">
     <!-- TODO: this should be perfectly vertically centered -->
-    <a href="#projects"> 
-        <img class="hero-logo" draggable="false" src="/img/10k24_longform_logo.svg" />
+    <a href="#projects">
+        <dotlottie-wc
+          src="/img/hero.lottie"
+          speed="1"
+          style="width: 100%; height: auto; aspect-ratio: 16/9;"
+          mode="forward"
+          loop
+          autoplay
+        ></dotlottie-wc>
+        <!-- <img class="hero-logo" draggable="false" src="/img/10k24_longform_logo.svg" /> -->
     </a>
 </section>
 <div class="tagline-wrap">
-    <h1 class="center tagline">A computing / creativity / collaboration studio based in Los Angeles</h1>
+    <h1 class="center tagline fade">A computing / creativity / collaboration studio based in Los Angeles</h1>
 </div>
 <div class="project-list" id="projects">
-        <div class="project-list-item">
+        <div class="project-list-item fade">
             <!-- <a href="/projects/words-have-power/"> -->
     <img class="og-scale" src="/projects/words-have-power/WHP_gif.webp" alt="Words Have Power Installation cover image" />
     <h3 class="project-title">Words Have Power Installation</h3>
@@ -105,7 +113,7 @@
 <!-- <p class="project-meta">Los Angeles, CA</p> -->
 <p class="project-meta">Projection Mapping, Installation, Generative Art</p>
         </div>
-        <div class="project-list-item">
+        <div class="project-list-item fade">
             <!-- <a href="/projects/processing-native/"> -->
     <img class="og-scale" src="/projects/processing-native/cover.png" alt="Processing Native cover image" />
     <h3 class="project-title">Processing Native</h3>
@@ -113,7 +121,7 @@
 <!-- <p class="project-meta">Los Angeles, CA</p> -->
 <p class="project-meta">Software Engineering</p>
         </div>
-        <div class="project-list-item">
+        <div class="project-list-item fade">
             <!-- <a href="/projects/clock/"> -->
     <img class="og-scale" src="/projects/clock/cover.png" alt="Clocks cover image" />
     <h3 class="project-title">Clocks</h3>
@@ -122,6 +130,22 @@
 <p class="project-meta">Creative Coding</p>
         </div>
 </div>
+
+
+        <h2>Ready to talk?</h2>
+        <div class="spacious"></div>
+        <div class="row">
+            <p>We work with a select few clients who believe in creating something memorable together. If&nbsp;this sounds like you, click the button below to tell us about your project. We read every form submission.</p>
+            <div />
+        </div>
+        <div class="row">
+            <button>
+                <a href="https://tally.so/r/KYkBPX" target=_blank>
+                    Start a project
+                </a>
+            </button>
+            <div />
+        </div>
     </main>
     <footer>
         <p>&copy; <script>document.write((new Date()).getFullYear());</script> 10k24 Studio.</p>
@@ -140,6 +164,10 @@
 
         gtag('config', 'G-CPZFEJK5BG');
     </script>
+    <script
+      src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"
+      type="module"
+    ></script>
     <script>
         // Load unique sketch scripts and instantiate all p5 sketches
         window.sketches = window.sketches || {};

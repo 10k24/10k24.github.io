@@ -26,6 +26,7 @@ module.exports = function (eleventyConfig) {
         "gif",
         "pdf",
         "mp4",
+        "lottie",
 
         "ttf",
         "webmanifest",

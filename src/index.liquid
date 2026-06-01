@@ -6,16 +6,24 @@ description: "A computing / creativity / collaboration studio based in Los Angel
 
 <section class="hero">
     <!-- TODO: this should be perfectly vertically centered -->
-    <a href="#projects"> 
-        <img class="hero-logo" draggable="false" src="/img/10k24_longform_logo.svg" />
+    <a href="#projects">
+        <dotlottie-wc
+          src="/img/hero.lottie"
+          speed="1"
+          style="width: 100%; height: auto; aspect-ratio: 16/9;"
+          mode="forward"
+          loop
+          autoplay
+        ></dotlottie-wc>
+        <!-- <img class="hero-logo" draggable="false" src="/img/10k24_longform_logo.svg" /> -->
     </a>
 </section>
 <div class="tagline-wrap">
-    <h1 class="center tagline">A computing / creativity / collaboration studio based in Los Angeles</h1>
+    <h1 class="center tagline fade">A computing / creativity / collaboration studio based in Los Angeles</h1>
 </div>
 <div class="project-list" id="projects">
     {%- for project in collections.projects -%}
-        <div class="project-list-item">
+        <div class="project-list-item fade">
             {% include "_includes/partials/project-item" %}
         </div>
     {%- endfor -%}

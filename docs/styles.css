@@ -282,6 +282,7 @@ canvas {
 }
 
 button, .btn {
+    display: block;
     justify-self: start;
     padding: 0.75rem 1.2rem;
     font-family: adelle-mono, monospace;
@@ -332,7 +333,7 @@ button > a:hover {
 
     footer {
         flex-direction: column-reverse;
-
+        margin-top: 1rem;
     }
 
     p {
@@ -372,16 +373,19 @@ button > a:hover {
     }
 
     .section-content {
+        gap: 1rem;
+        margin-bottom: 1rem;
         margin-left: 0;
     }
 
     .section-with-list {
-        gap: 4rem;
+        gap: 1rem;
+        margin-bottom: 4rem;
     }
 
     .section-item {
         max-width: 100%;
-        margin-bottom: 2rem;
+        margin-bottom: 0;
     }
 
     .hero {
@@ -405,6 +409,10 @@ button > a:hover {
         padding: 0;
         margin-left: 0;
         text-align: left;
+    }
+
+    .footer-cta {
+        margin-bottom: 1rem;
     }
 
     .footer-links {
@@ -433,6 +441,10 @@ button > a:hover {
     .btn-row {
         flex-direction: column;
         margin-bottom: 4rem;
+    }
+
+    .btn {
+        margin-bottom: 1rem;
     }
 
     .mobile-only {

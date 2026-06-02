@@ -4,7 +4,9 @@
 
 - [X] Lead/intake form: context paragraph at the top
 - [X] Lottie file header animation
-- [ ] services on home page -- DO NOT use the word “brand” for its negative historical meanings, and maybe even include a statement about why
+- [ ] spacing
+- [ ] mobile layout
+
 - [ ] 404 page
 - [ ] ideas list page
 - [ ] idea individual pages (obv with coherent thoughts)
@@ -16,6 +18,7 @@
 - [ ] Bring back full sitemap
 - [ ] Add feed.xml
 - [ ] Studio + services page, basically show credibility
+- [ ] services on home page -- DO NOT use the word “brand” for its negative historical meanings, and maybe even include a statement about why
 - [ ] 3 landing pages for niches: /culture, /tech, etc.
 - [ ] write .github/profile/README file with similar content as above, but shorter;
    - [ ] probably need some infographic for the 3 pillars: Creativity, Computing, Collaboration

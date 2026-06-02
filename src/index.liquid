@@ -53,14 +53,17 @@ description: "A design studio built on creativity, computing, and collaboration.
         </div>
     </div>
 </section>
-<div class="project-list" id="projects">
-    <p class="big-type">Our projects span business innovation to computational artwork, and everything in between.</p>
+<section class="section-with-list project-list" id="projects">
+    <h2>Selected Projects</h2>
+    <div class="section-content">
+        <p class="big-type">Our projects span business innovation to computational artwork, and everything in between.</p>
+    </div>
     {%- for project in collections.projects -%}
         <div class="project-list-item fade">
             {% include "_includes/partials/project-item" %}
         </div>
     {%- endfor -%}
-</div>
+</section>
 <section class="section-with-list">
     <h2>How we work</h2>
     <div class="section-content">

@@ -40,11 +40,11 @@ a:hover {
 }
 
 hr {
-    margin: 3rem auto;
+    /*margin: 3rem auto;*/
     /*border-color: #808080;*/
     border-style: solid;
     border-color: #ffffff;
-    border-width: 2px;
+    border-width: 1px;
     min-width: 100%;
 }
 
@@ -59,6 +59,11 @@ h2 {
     font-size: 2.4rem;
     font-weight: 400;
     text-align: left;
+    margin-top: 0.5rem;
+}
+
+.section-with-list > h2 {
+    margin-bottom: 8rem;
 }
 
 p {
@@ -142,10 +147,16 @@ section {
 
 .section-with-list {
     gap: 8rem;
+    margin-bottom: 8rem;
+}
+
+.section-last {
+    gap: 0rem;
 }
 
 .section-item {
-    margin-bottom: 1.5rem;
+    /*margin-bottom: 1.5rem;*/
+    margin-bottom: 4rem;
     max-width: 50%;
 }
 
@@ -183,7 +194,12 @@ main {
 }
 
 footer {
-    margin-top: 4rem;
+    margin-top: 0.5rem;
+}
+
+.footer-cta {
+    margin-top: 1rem;
+    margin-bottom: 6.125rem;
 }
 
 .og-scale {
@@ -191,12 +207,10 @@ footer {
     aspect-ratio: 1200/630;
 }
 
-/* .project-list {} */
-
 .project-list-item, .idea-list-item {
     width: 100%;
-    margin-top: 8rem;
-    margin-bottom: 8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .project-list-item a {
@@ -328,6 +342,10 @@ button > a:hover {
         line-height: 4rem;
     }
 
+    .section-with-list > h2 {
+        margin-bottom: 0rem;
+    }
+
     h3.project-title, h3.idea-title {
         margin-bottom: 0.25rem;
         font-size: 1.25rem;
@@ -340,20 +358,36 @@ button > a:hover {
         line-height: 1.25rem;
     }
 
+    p.big-type {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        text-wrap-mode: balance;
+    }
+
+    p { 
+        text-wrap-mode: balance;
+    }
+
     .idea-body {
         max-width: 100vw;
     }
 
     .section-content {
-        margin-left: 0;
+        margin-left: 0;;
+    }
+
+    .section-with-list {
+        gap: 4rem;
     }
 
     .section-item {
         max-width: 100%;
+        margin-bottom: 2rem;
     }
 
     .hero {
         min-height: 40vh;
+        margin-top: 2rem;
     }
 
     .hero .hero-logo {
@@ -384,16 +418,22 @@ button > a:hover {
         margin-left: -2rem;
     }
 
-
     .tagline-wrap {
         width: 100vw;
         margin: 0 -2rem;
     }
 
     .tagline {
-        padding: 1rem;
-        font-size: 1.5rem;
-        line-height: 2.1rem;
+        margin: 1rem;
+        padding-bottom: 2rem;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        text-wrap-style: balance;
+    }
+
+    .btn-row {
+        flex-direction: column;
+        margin-bottom: 4rem;
     }
 
     .mobile-only {

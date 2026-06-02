@@ -7,6 +7,7 @@
 - [ ] spacing
 - [ ] mobile layout
 
+- [ ] experiment with lottiefile animation as a permanent background underneath content hmm
 - [ ] 404 page
 - [ ] ideas list page
 - [ ] idea individual pages (obv with coherent thoughts)

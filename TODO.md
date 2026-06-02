@@ -2,11 +2,6 @@
 
 # MVP launch
 
-- [X] Lead/intake form: context paragraph at the top
-- [X] Lottie file header animation
-- [ ] spacing
-- [ ] mobile layout
-
 - [ ] experiment with lottiefile animation as a permanent background underneath content hmm
 - [ ] 404 page
 - [ ] ideas list page

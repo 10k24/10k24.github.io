@@ -1,7 +1,6 @@
 ---
 openGraphImage: "/img/opengraph.png"
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +16,8 @@ openGraphImage: "/img/opengraph.png"
     <meta property="og:url" content="{{metadata.baseURL}}{{page.url}}" />
     <meta property="og:title" content="{{metadata.studioname}} | {{title}}" />
     <meta property="og:image" content="{{metadata.baseURL}}{{openGraphImage}}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:description" content="{{description}}" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
@@ -92,13 +93,29 @@ openGraphImage: "/img/opengraph.png"
     </header>
     <main>
         {{ content }}
+
+        <section class="section-last">
+            <hr>
+            <h2 class="footer-cta">Ready to work together?</h2>
+            <div class="section-content">
+                <div class="section-item">
+                    <br />
+                    <br />
+                    <p>We work with a select few clients who believe in creating something memorable together. If&nbsp;this sounds like you, click the button below to tell us about your project. We read every form submission.</p>
+                    <br>
+                    <a class="btn" href="https://tally.so/r/KYkBPX" target=_blank>&rarr; Start a project</a>
+                </div>
+            </div>
+            <hr>
+        </section>
     </main>
+    <!-- TODO: true sticky footer, nice corner composition on home page -->
     <footer>
-        <p>&copy; <script>document.write((new Date()).getFullYear());</script> {{metadata.studioname}}.</p>
+        <p>&copy; <script>document.write((new Date()).getFullYear());</script> {{metadata.studioname}}. Los&nbsp;Angeles,&nbsp;California.</p>
         <div class="footer-links">
             <a href="https://instagram.com/10k24.studio" target=_blank>Instagram</a>
             <a href="https://github.com/10k24" target=_blank>GitHub</a>
-            <a href="mailto:{{metadata.author.email}}">{{metadata.author.email}}</a>
+            {% emailLink metadata.author.email %}
         </div>
     </footer>
     <!-- Google tag (gtag.js) -->
@@ -110,6 +127,10 @@ openGraphImage: "/img/opengraph.png"
 
         gtag('config', 'G-CPZFEJK5BG');
     </script>
+    <script
+      src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"
+      type="module"
+    ></script>
     <script>
         // Load unique sketch scripts and instantiate all p5 sketches
         window.sketches = window.sketches || {};

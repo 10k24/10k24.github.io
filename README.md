@@ -61,5 +61,5 @@ Non-p5 JS files are copied unchanged to the output directory.
 ```bash
 npm install
 npm run build      # Build site
-npm run serve      # Build and serve with live reload
+npm run dev        # Build and serve with live reload
 ```

@@ -7,6 +7,16 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(transpileSketchesPlugin);
     eleventyConfig.setInputDirectory("src");
     eleventyConfig.setOutputDirectory("docs");
+    eleventyConfig.addCollection("projectsReversed", function(collectionApi) {
+        const projects = collectionApi.getFilteredByTag("projects");
+        const order = [
+            "/projects/words-have-power/",
+            "/projects/processing-native/",
+            "/projects/clock/"
+        ];
+        return order.map(url => projects.find(p => p.url === url)).filter(Boolean);
+    });
+
     eleventyConfig.ignores.add("**/cover.liquid");
     // eleventyConfig.ignores.add("**/ideas");
 

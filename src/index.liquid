@@ -58,7 +58,7 @@ description: "A design studio built on creativity, computing, and collaboration.
     <div class="section-content">
         <p class="big-type">Our projects span business innovation to computational artwork, and everything in between.</p>
     </div>
-    {%- for project in collections.projects | reverse -%}
+    {%- for project in collections.projectsReversed -%}
         <div class="project-list-item fade">
             {% include "_includes/partials/project-item" %}
         </div>

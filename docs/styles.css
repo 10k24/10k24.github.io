@@ -40,26 +40,28 @@ a:hover {
 }
 
 hr {
-    /*margin: 3rem auto;*/
-    /*border-color: #808080;*/
-    border-style: solid;
-    border-color: #ffffff;
-    border-width: 1px;
     min-width: 100%;
+    border-color: #ffffff;
+
+    /* margin: 3rem auto; */
+
+    /* border-color: #808080; */
+    border-style: solid;
+    border-width: 1px;
 }
 
 h1 {
     margin-bottom: 4.0rem;
     font-size: 2.8rem;
-    line-height: 4.0rem;
     font-weight: 400;
+    line-height: 4.0rem;
 }
 
 h2 {
+    margin-top: 0.5rem;
     font-size: 2.4rem;
     font-weight: 400;
     text-align: left;
-    margin-top: 0.5rem;
 }
 
 .section-with-list > h2 {
@@ -73,7 +75,7 @@ p {
 p.big-type {
     font-size: 1.75rem;
     line-height: 2.125rem;
-    text-wrap-style: balance;
+    text-wrap: balance;
 }
 
 blockquote {
@@ -128,6 +130,7 @@ header, nav, footer, .footer-links {
 /* TODO: trigger this onScroll, sequentially */
 .fade {
     opacity: 0;
+
     /* animation: fade-in 2s ease-in forwards; */
     animation: fade-in 1.5s cubic-bezier(.55,.1,.9,.55) forwards;
 }
@@ -139,10 +142,10 @@ section {
 }
 
 .section-content {
-    margin-left: 25%;
-    gap: 4rem;
     display: flex;
     flex-direction: column;
+    gap: 4rem;
+    margin-left: 25%;
 }
 
 .section-with-list {
@@ -151,19 +154,20 @@ section {
 }
 
 .section-last {
-    gap: 0rem;
+    gap: 0;
 }
 
 .section-item {
-    /*margin-bottom: 1.5rem;*/
-    margin-bottom: 4rem;
     max-width: 50%;
+
+    /* margin-bottom: 1.5rem; */
+    margin-bottom: 4rem;
 }
 
 .section-item h3 {
     font-size: 1.75rem;
-    line-height: 2.125rem;
     font-weight: 700;
+    line-height: 2.125rem;
 }
 
 .hero {
@@ -280,13 +284,11 @@ canvas {
 button, .btn {
     justify-self: start;
     padding: 0.75rem 1.2rem;
-
     font-family: adelle-mono, monospace;
-    font-weight: 700;
     font-size: 1rem;
-
-    background-color: #FFFFFF;
+    font-weight: 700;
     color: #000000;
+    background-color: #FFFFFF;
 }
 
 .btn:hover {
@@ -294,11 +296,11 @@ button, .btn {
 }
 
 .btn-outline {
+    color: #FFFFFF;
     background-color: #000000;
     border-color: #FFFFFF;
-    border-radius: 1px;
     border-style: solid;
-    color: #FFFFFF;
+    border-radius: 1px;
 }
 
 button > a {
@@ -335,6 +337,7 @@ button > a:hover {
 
     p {
         font-size: 0.9rem;
+        text-wrap: balance;
     }
 
     h1 {
@@ -343,7 +346,7 @@ button > a:hover {
     }
 
     .section-with-list > h2 {
-        margin-bottom: 0rem;
+        margin-bottom: 0;
     }
 
     h3.project-title, h3.idea-title {
@@ -361,11 +364,7 @@ button > a:hover {
     p.big-type {
         font-size: 1.25rem;
         line-height: 1.75rem;
-        text-wrap-mode: balance;
-    }
-
-    p { 
-        text-wrap-mode: balance;
+        text-wrap: balance;
     }
 
     .idea-body {
@@ -373,7 +372,7 @@ button > a:hover {
     }
 
     .section-content {
-        margin-left: 0;;
+        margin-left: 0;
     }
 
     .section-with-list {
@@ -424,11 +423,11 @@ button > a:hover {
     }
 
     .tagline {
-        margin: 1rem;
         padding-bottom: 2rem;
+        margin: 1rem;
         font-size: 1.25rem;
         line-height: 1.75rem;
-        text-wrap-style: balance;
+        text-wrap: balance;
     }
 
     .btn-row {

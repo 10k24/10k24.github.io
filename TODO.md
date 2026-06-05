@@ -2,15 +2,17 @@
 
 # MVP launch
 
+- [ ] initial 3 project pages filled out
+   - [ ] review typography + copy
+   - [ ] update cover image for MJ
+   - [ ] Expand Salgirah case study
 - [ ] experiment with lottiefile animation as a permanent background underneath content hmm
 - [ ] 404 page
 - [ ] ideas list page
 - [ ] idea individual pages (obv with coherent thoughts)
 - [ ] for ideas pages, generate og images at build time - see: https://github.com/vercel/satori#documentation
 - [ ] Workflow - each new project (especially the technical ones), get 2 posts: project page and idea/blog page announcing it. That then gets pushed to socials, etc. Tight workflow, and should help with SEO
-- [ ] initial 3 project pages w/ cover only + hide project pages
 - [ ] mobile menu
-- [ ] initial 3 project pages filled out
 - [ ] Bring back full sitemap
 - [ ] Add feed.xml
 - [ ] Studio + services page, basically show credibility
@@ -21,6 +23,7 @@
 
 ## Features
 
+- [ ] try this motion library over GSAP
 - [ ] components for project, metadata, etc?
 - [ ] move idea generator into this repo, maybe under a tools section: https://github.com/smideas/smideas.github.io/blob/main/index.html
    - [ ] reference: https://shouldideploy.today/

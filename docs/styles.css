@@ -8,6 +8,10 @@
     }
 }
 
+* {
+    text-wrap-style: balance;
+}
+
 .alt-at {
     font-feature-settings: "case" 1;
 }
@@ -70,6 +74,7 @@ h2 {
 
 p {
     line-height: 1.6rem;
+    text-wrap: balance;
 }
 
 p.big-type {
@@ -87,6 +92,10 @@ blockquote {
     text-align: center;
 }
 
+.grid-1 .caption {
+    max-width: 50%;
+}
+
 header {
     z-index: 999;
     margin-top: 1rem;
@@ -99,10 +108,21 @@ header, nav, footer, .footer-links {
     justify-content: space-between;
 }
 
-.row {
+.grid-1, .grid-2, .grid-3, .grid-4 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.grid-1 { grid-template-columns: 1fr; }
+.grid-2 { grid-template-columns: 1fr 1fr; }
+.grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+.grid-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.portfolio-img {
+    width: 100%;
+    max-width: 100%;
 }
 
 .nav-item > a, .footer-links > a {
@@ -212,10 +232,10 @@ footer {
 }
 
 .project-list-item, .idea-list-item {
-    width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
 
 .project-list-item a {
     text-decoration: none;
@@ -450,8 +470,16 @@ button > a:hover {
     .mobile-only {
         display: block;
     }
-    
+
     .desktop-only {
         display: none;
+    }
+
+    .grid-1 .caption {
+        max-width: 100%;
+    }
+
+    .grid-2, .grid-3, .grid-4 {
+        grid-template-columns: 1fr;
     }
 }

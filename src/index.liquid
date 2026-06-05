@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Los Angeles"
 layout: base
 description: "A design studio built on creativity, computing, and collaboration."
 ---
@@ -57,13 +57,24 @@ description: "A design studio built on creativity, computing, and collaboration.
 <section class="section-with-list project-list" id="projects">
     <h2>Selected Projects</h2>
     <div class="section-content">
-        <p class="big-type">Our projects span business innovation to computational artwork, and everything in between.</p>
+        <p class="big-type">We partner with ambitious teams to build brands that stand out. Here’s some of our recent work.</p>
     </div>
-    {%- for project in collections.projectsReversed -%}
+    {%- for project in collections.brandProjects -%}
         <div class="project-list-item fade">
             {% include "_includes/partials/project-item" %}
         </div>
     {%- endfor -%}
+    <!-- <h2>Technology Projects</h2> -->
+     <div class="section-content">
+        <p class="big-type">We also build tools and explore creative technology through open source and independent projects.</p>
+    </div>
+    <div class="grid-3">
+        {%- for project in collections.techProjects -%}
+            <div class="project-list-item fade">
+                {% include "_includes/partials/project-item" %}
+            </div>
+        {%- endfor -%}
+    </div>
 </section>
 <hr class="mobile-only">
 <section class="section-with-list">

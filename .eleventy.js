@@ -7,9 +7,27 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(transpileSketchesPlugin);
     eleventyConfig.setInputDirectory("src");
     eleventyConfig.setOutputDirectory("docs");
+    eleventyConfig.addCollection("brandProjects", function(collectionApi) {
+        const projects = collectionApi.getFilteredByTag("projects");
+        const order = [
+            "/projects/planetary-society/",
+            "/projects/salgirah-festival/",
+            "/projects/midjourney/"
+        ];
+        return order.map(url => projects.find(p => p.url === url)).filter(Boolean);
+    });
+
+    eleventyConfig.addCollection("techProjects", function(collectionApi) {
+        return collectionApi.getFilteredByTag("tech").reverse();
+    });
+
+    // Keep for backwards compat (used elsewhere if any)
     eleventyConfig.addCollection("projectsReversed", function(collectionApi) {
         const projects = collectionApi.getFilteredByTag("projects");
         const order = [
+            "/projects/planetary-society/",
+            "/projects/salgirah-festival/",
+            "/projects/midjourney/",
             "/projects/words-have-power/",
             "/projects/processing-native/",
             "/projects/clock/"
@@ -44,6 +62,14 @@ module.exports = function (eleventyConfig) {
     ]);
 
     eleventyConfig.addPassthroughCopy("src/CNAME");
+
+    const OMIT_TAGS = new Set(["projects", "tech"]);
+    function titleCase(str) {
+        return str.replace(/\w\S*/g, w => w.charAt(0).toUpperCase() + w.slice(1));
+    }
+    eleventyConfig.addFilter("displayTags", tags => {
+        return titleCase((tags || []).filter(t => !OMIT_TAGS.has(t)).join(", "));
+    });
 
     eleventyConfig.setLiquidOptions({
         jsTruthy: true

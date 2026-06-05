@@ -17,7 +17,15 @@ description: "A computing / creativity / collaboration studio based in Los Angel
 <!-- TODO: here could be a row of project types / services -->
 <!-- TODO: different grid layout, maybe paragraph context or 2-up layout? -->
 <div class="project-list">
-    {%- for project in collections.projectsReversed -%}
+    {%- for project in collections.brandProjects -%}
+        <div class="project-list-item">
+            {% include "_includes/partials/project-item" %}
+        </div>
+    {%- endfor -%}
+</div>
+
+<div class="grid-3" style="margin-top:4rem">
+    {%- for project in collections.techProjects -%}
         <div class="project-list-item">
             {% include "_includes/partials/project-item" %}
         </div>

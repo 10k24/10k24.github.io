@@ -1,6 +1,19 @@
-<!-- <a href="{{ project.url }}"> -->
-    <img class="og-scale" src="{{ project.url }}{{project.data.cover}}" alt="{{project.data.title}} cover image" />
+{% assign coverExt = project.data.cover | split: "." | last %}
+{% assign isTech = false %}
+{% if project.data.tags contains "tech" %}{% assign isTech = true %}{% endif %}
+
+{% unless isTech %}
+<a href="{{ project.url }}">
+{% endunless %}
+    {% if coverExt == "mp4" %}
+        <video class="og-scale" autoplay loop muted playsinline preload="metadata">
+            <source src="{{ project.url }}{{project.data.cover}}" type="video/mp4">
+        </video>
+    {% else %}
+        <img class="og-scale" src="{{ project.url }}{{project.data.cover}}" alt="{{project.data.title}} cover image" />
+    {% endif %}
     <h3 class="project-title">{{project.data.title}}</h3>
-<!-- </a> -->
-<!-- <p class="project-meta">{{project.data.location}}</p> -->
-<p class="project-meta">{{project.data.media}}</p>
+    <p class="project-meta">{{project.data.tags | displayTags}}</p>
+{% unless isTech %}
+</a>
+{% endunless %}

@@ -6,15 +6,22 @@ layout: base
     <!-- TODO: figure out how to resolve cover img/gif, OG, this header; maybe on-hover of each -->
     <!-- TODO: error if such file is missing -->
     {% if hideCover != true %}
-        <img class="og-scale" src="./{{cover}}" alt="{{title}} cover image" />
+        {% assign coverExt = cover | split: "." | last %}
+        {% if coverExt == "mp4" %}
+            <video class="og-scale" autoplay loop muted playsinline preload="metadata">
+                <source src="./{{cover}}" type="video/mp4">
+            </video>
+        {% else %}
+            <img class="og-scale" src="./{{cover}}" alt="{{title}} cover image" />
+        {% endif %}
     {% endif %}
     {% if altCover != null %}
         {% include "./{{ page.url }}{{altCover}}" %}
     {% endif %}
     
     <h1>{{title}}</h1>
-    <p class="project-meta">{{location}}</p>
     <p class="project-meta">{{media}}</p>
+    {% if client %}<p class="project-meta">Client: {{client}}</p>{% endif %}
 </div>
 
 <div>

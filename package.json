@@ -25,11 +25,15 @@
     "lint": "bunx stylelint src/*.css",
     "lint:fix": "bunx stylelint --fix src/*.css",
     "fix": "bun run lint:fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "optimize": "node scripts/optimize.js",
+    "test:words": "bunx cspell lint 'docs/**/*.html' --no-progress --no-summary --quiet && echo 'test:words: clean'",
+    "test": "bun run test:words"
   },
   "private": true,
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "cspell": "^9.7.0",
+    "@11ty/eleventy-img": "^6.0.4",
     "bun": "^1.3.10",
     "liquidjs": "^10.24.0",
     "stylelint": "^17.4.0",

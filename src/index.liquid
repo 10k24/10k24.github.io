@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Los Angeles"
 layout: base
 description: "A design studio built on creativity, computing, and collaboration."
 ---
@@ -10,7 +10,7 @@ description: "A design studio built on creativity, computing, and collaboration.
         <dotlottie-wc
           src="/img/hero.lottie"
           speed="1"
-          style="width: 100%; height: auto; aspect-ratio: 16/9;"
+          class="video-16-9"
           mode="forward"
           loop
           autoplay
@@ -25,8 +25,8 @@ description: "A design studio built on creativity, computing, and collaboration.
     <!-- <h1 class="center tagline fade">A computing / creativity / collaboration studio based in Los Angeles</h1> -->
     <h1 class="center tagline fade">A design studio built on creativity, computing, and collaboration. We&nbsp;help ambitious teams go beyond what’s possible.</h1>
     <div class="btn-row center">
-        <a class="btn btn-outline" target=_blank href="https://cal.com/10k24/30">Free 30 min. Call</a>
-        <a class="btn" target=_blank href="https://tally.so/r/KYkBPX">→ Start a Project</a>
+        <a class="btn btn-outline" target="_blank" rel="noopener noreferrer" href="https://cal.com/10k24/30">Free 30 min. Call</a>
+        <a class="btn" target="_blank" rel="noopener noreferrer" href="https://tally.so/r/KYkBPX">→ Start a Project</a>
     </div>
 </section>
 <section class="section-with-list">
@@ -57,13 +57,24 @@ description: "A design studio built on creativity, computing, and collaboration.
 <section class="section-with-list project-list" id="projects">
     <h2>Selected Projects</h2>
     <div class="section-content">
-        <p class="big-type">Our projects span business innovation to computational artwork, and everything in between.</p>
+        <p class="big-type">We partner with ambitious teams to build brands that stand out. Here’s some of our recent work.</p>
     </div>
-    {%- for project in collections.projectsReversed -%}
+    {%- for project in collections.brandProjects -%}
         <div class="project-list-item fade">
             {% include "_includes/partials/project-item" %}
         </div>
     {%- endfor -%}
+    <!-- <h2>Technology Projects</h2> -->
+     <div class="section-content">
+        <p class="big-type">We also build tools and explore creative technology through open source and independent projects.</p>
+    </div>
+    <div class="grid-3">
+        {%- for project in collections.techProjects -%}
+            <div class="project-list-item fade">
+                {% include "_includes/partials/project-item" %}
+            </div>
+        {%- endfor -%}
+    </div>
 </section>
 <hr class="mobile-only">
 <section class="section-with-list">

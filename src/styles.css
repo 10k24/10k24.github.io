@@ -191,7 +191,7 @@ section {
 }
 
 .hero {
-    min-height: 100vh;
+    /*min-height: 100vh;*/
     margin-top: -4rem;
 }
 
@@ -269,6 +269,16 @@ p.project-meta, p.idea-meta {
 
 .idea-body {
     max-width: 60vw;
+}
+
+.portfolio-img {
+    width: 100%;
+}
+
+.video-16-9 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
 }
 
 .mobile-only {

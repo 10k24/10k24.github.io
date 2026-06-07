@@ -55,10 +55,7 @@
     }
     </script>
     
-    
-    <!-- Single sketch mode: load p5.js once -->
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
-    
 </head>
 <body>
     <header>
@@ -93,7 +90,7 @@
         <dotlottie-wc
           src="/img/hero.lottie"
           speed="1"
-          style="width: 100%; height: auto; aspect-ratio: 16/9;"
+          class="video-16-9"
           mode="forward"
           loop
           autoplay
@@ -108,8 +105,8 @@
     <!-- <h1 class="center tagline fade">A computing / creativity / collaboration studio based in Los Angeles</h1> -->
     <h1 class="center tagline fade">A design studio built on creativity, computing, and collaboration. We&nbsp;help ambitious teams go beyond what’s possible.</h1>
     <div class="btn-row center">
-        <a class="btn btn-outline" target=_blank href="https://cal.com/10k24/30">Free 30 min. Call</a>
-        <a class="btn" target=_blank href="https://tally.so/r/KYkBPX">→ Start a Project</a>
+        <a class="btn btn-outline" target="_blank" rel="noopener noreferrer" href="https://cal.com/10k24/30">Free 30 min. Call</a>
+        <a class="btn" target="_blank" rel="noopener noreferrer" href="https://tally.so/r/KYkBPX">→ Start a Project</a>
     </div>
 </section>
 <section class="section-with-list">
@@ -283,7 +280,7 @@
                     <br />
                     <p>We work with a select few clients who believe in creating something memorable together. If&nbsp;this sounds like you, click the button below to tell us about your project. We read every form submission.</p>
                     <br>
-                    <a class="btn" href="https://tally.so/r/KYkBPX" target=_blank>&rarr; Start a project</a>
+                    <a class="btn" href="https://tally.so/r/KYkBPX" target="_blank" rel="noopener noreferrer">&rarr; Start a project</a>
                 </div>
             </div>
             <hr>
@@ -291,13 +288,14 @@
     </main>
     <!-- TODO: true sticky footer, nice corner composition on home page -->
     <footer>
-        <p>&copy; <script>document.write((new Date()).getFullYear());</script> 10k24 Studio. Los&nbsp;Angeles,&nbsp;California.</p>
+        <p>&copy; <span id="year"></span> 10k24 Studio. Los&nbsp;Angeles,&nbsp;California.</p>
         <div class="footer-links">
-            <a href="https://instagram.com/10k24.studio" target=_blank>Instagram</a>
-            <a href="https://github.com/10k24" target=_blank>GitHub</a>
+            <a href="https://instagram.com/10k24.studio" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://github.com/10k24" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="mailto:info@10k24.com">info<span class="alt-at">@</span>10k24.com</a>
         </div>
     </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPZFEJK5BG"></script>
     <script>

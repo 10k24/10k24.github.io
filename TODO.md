@@ -2,10 +2,12 @@
 
 # MVP launch
 
-- [ ] initial 3 project pages filled out
-   - [ ] review typography + copy
-   - [ ] update cover image for MJ
-   - [ ] Expand Salgirah case study
+
+- [ ] update cover image for MJ
+- [ ] omit favicon and opengraph images from optimize script
+- [ ] update all cover images to be full res, or much higher... now they are basically 100vw
+- [ ] logo animation should be vertically centered at top of page
+- [ ] maybe indicate down to hint for scroll, z-index 9999
 - [ ] experiment with lottiefile animation as a permanent background underneath content hmm
 - [ ] 404 page
 - [ ] ideas list page
@@ -21,9 +23,14 @@
 - [ ] write .github/profile/README file with similar content as above, but shorter;
    - [ ] probably need some infographic for the 3 pillars: Creativity, Computing, Collaboration
 
+# Salgirah Festival
+
+- [ ] Salgirah: add wristband mockup
+
+
 ## Features
 
-- [ ] try this motion library over GSAP
+- [ ] try this motion library over GSAP: https://motion.dev/
 - [ ] components for project, metadata, etc?
 - [ ] move idea generator into this repo, maybe under a tools section: https://github.com/smideas/smideas.github.io/blob/main/index.html
    - [ ] reference: https://shouldideploy.today/

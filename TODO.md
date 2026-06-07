@@ -1,7 +1,23 @@
 # TODO
 
-# MVP launch
+Missing pages (critical gaps)
 
+1. About page — No studio/team story, no faces, no credentials. Every design studio has this. Right now the only story is buried in an
+/ideas post.
+2. Nav is broken — Only "Email Us" is in the nav. Projects and Ideas aren't linked from header. A visitor can't discover the depth of the
+site.
+
+Content gaps on existing pages
+
+3. 3 incomplete project pages — Words Have Power, Processing Native, and Clock are stubs with <!-- TODO: copy --> placeholders. If linked
+from the projects page, they'd look unprofessional.
+4. Tech project pages lack business context — Clock/Processing Native/Words Have Power just exist without a "so what" — no outcome, no
+story, no reason a client would care.
+5. Projects page copy is off-brand — Still uses old "computing, creativity, collaboration" voice. Mentioned in the last audit but never
+addressed.
+
+
+# MVP launch
 
 - [ ] update cover image for MJ
 - [ ] update all cover images to be full res, or much higher... now they are basically 100vw

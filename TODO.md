@@ -26,6 +26,7 @@ addressed.
 - [ ] experiment with lottiefile animation as a permanent background underneath content hmm
 - [ ] 404 page
 - [ ] ideas list page
+- [ ] broken link + other smoke tests
 - [ ] idea individual pages (obv with coherent thoughts)
 - [ ] for ideas pages, generate og images at build time - see: https://github.com/vercel/satori#documentation
 - [ ] Workflow - each new project (especially the technical ones), get 2 posts: project page and idea/blog page announcing it. That then gets pushed to socials, etc. Tight workflow, and should help with SEO

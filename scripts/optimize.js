@@ -10,12 +10,13 @@ const CACHE_PATH = path.resolve(ROOT, ".cache/optimize-media.json");
 const TARGET_EXTENSIONS = new Set([".png", ".jpg", ".jpeg"]);
 const VIDEO_EXTENSIONS = new Set([".mp4"]);
 const VIDEO_ENCODER_SIGNATURE = "vp9-crf33-b0-rowmt1-opus-v1";
+const FAVICON_PATTERN = /\/(favicon[^/]*|apple-touch-icon[^/]*|web-app-manifest[^/]*)$/i;
 
 async function main() {
     const allFiles = collectFiles(DOCS_ROOT);
     const imageFiles = allFiles.filter((file) => {
         const ext = path.extname(file).toLowerCase();
-        return TARGET_EXTENSIONS.has(ext);
+        return TARGET_EXTENSIONS.has(ext) && !FAVICON_PATTERN.test(file);
     });
     const videoFiles = allFiles.filter((file) => {
         const ext = path.extname(file).toLowerCase();

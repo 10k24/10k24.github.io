@@ -4,7 +4,6 @@
 
 
 - [ ] update cover image for MJ
-- [ ] omit favicon and opengraph images from optimize script
 - [ ] update all cover images to be full res, or much higher... now they are basically 100vw
 - [ ] logo animation should be vertically centered at top of page
 - [ ] maybe indicate down to hint for scroll, z-index 9999

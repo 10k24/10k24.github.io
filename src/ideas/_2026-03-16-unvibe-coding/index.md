@@ -33,7 +33,7 @@ Perhaps, a spec/prompt that compiles.
 
 ---
 
-We’ve been thinking about this from a slightly unusual angle. Our background is brand systems — we spend our days defining the rules that generate consistent visual outputs across every context a brand appears in. A type system, a color system, a component system. The whole discipline is about making variance a choice rather than an accident. You define the rules once, and the system produces predictable results everywhere.
+We’ve been thinking about this from a slightly unusual angle. Our background is br*nd systems — we spend our days defining the rules that generate consistent visual outputs across every context a br*nd appears in. A type system, a color system, a component system. The whole discipline is about making variance a choice rather than an accident. You define the rules once, and the system produces predictable results everywhere.
 
 Product behavior is the same problem. You have rules — who can do what, what exists, what happens when. The reason vibe coding produces unpredictable outputs is that those rules are either never written down or written in a form the AI can’t reason about reliably. The fix is writing the rules down in a form that actually compiles.
 

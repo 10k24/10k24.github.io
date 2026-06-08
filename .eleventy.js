@@ -7,7 +7,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(transpileSketchesPlugin);
     eleventyConfig.setInputDirectory("src");
     eleventyConfig.setOutputDirectory("docs");
-    eleventyConfig.addCollection("brandProjects", function(collectionApi) {
+    eleventyConfig.addCollection("designProjects", function(collectionApi) {
         const projects = collectionApi.getFilteredByTag("projects");
         const order = [
             "/projects/planetary-society/",

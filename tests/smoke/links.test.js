@@ -21,10 +21,6 @@ function isExternal(value) {
     return /^(https?:|mailto:|tel:|javascript:|#)/.test(value) || value.startsWith("//");
 }
 
-function isAnchorOnly(value) {
-    return value.startsWith("#");
-}
-
 function hrefsFromHtml(html) {
     const hrefs = [];
     const re = /<a\b[^>]*\bhref=["']([^"']+)["']/gi;

@@ -26,6 +26,7 @@
     "lint:fix": "bunx stylelint --fix src/*.css",
     "fix": "bun run lint:fix",
     "optimize": "node scripts/optimize.js",
+    "pretest": "bun run build && bun run lint",
     "posttest": "bunx cspell lint 'docs/**/*.html' --no-progress --no-summary --quiet && echo 'posttest: clean'",
     "test": "bun test"
   },

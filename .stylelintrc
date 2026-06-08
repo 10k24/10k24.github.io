@@ -15,6 +15,7 @@
     "alpha-value-notation": null,
     "at-rule-no-vendor-prefix": null,
     "selector-max-id": 0,
+    "no-descending-specificity": null,
     "declaration-no-important": true
   }
 }

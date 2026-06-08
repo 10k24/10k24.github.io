@@ -1,11 +1,6 @@
 # We use Bun
 package-lock.json
 
-# temporary workaround
-docs/projects/*/index.html
-docs/projects/index.html
-docs/*/*.11tydata.*
-
 .DS_Store
 
 # Logs

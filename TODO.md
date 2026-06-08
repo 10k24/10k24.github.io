@@ -41,6 +41,7 @@ addressed.
 # Salgirah Festival
 
 - [ ] Salgirah: add wristband mockup
+- [ ] Salgirah - include some digital, good opportunity for showing headlines in different languages (could be social posts or large screens)
 
 
 ## Features

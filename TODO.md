@@ -24,9 +24,8 @@ addressed.
 - [ ] logo animation should be vertically centered at top of page
 - [ ] maybe indicate down to hint for scroll, z-index 9999
 - [ ] experiment with lottiefile animation as a permanent background underneath content hmm
-- [ ] 404 page
+- [ ] 404 page - similar motion idea to homepage animation
 - [ ] ideas list page
-- [ ] broken link + other smoke tests
 - [ ] idea individual pages (obv with coherent thoughts)
 - [ ] for ideas pages, generate og images at build time - see: https://github.com/vercel/satori#documentation
 - [ ] Workflow - each new project (especially the technical ones), get 2 posts: project page and idea/blog page announcing it. That then gets pushed to socials, etc. Tight workflow, and should help with SEO
@@ -79,16 +78,6 @@ addressed.
 
 ===
 
-10k24 Studio Positioning:
-Homepage (KPI framing):
-"10k24 builds technical creative systems for organizations that need distinctive brands without traditional agency overhead.
-We specialize in:
+About page notes
 
-Visual identity + technical implementation (design + code)
-Generative design tools for creative teams
-Brand systems for cultural organizations and startups
-
-Recent work: International festival reaching 1M+ people across 21 countries, luxury interiors brand, wellness expansion, consumer tech launch."
-About page (KPI story):
 "Founded by Shakeel Mohamed, 10k24 combines 10 years of software engineering across developer tools, performance with graduate-level design training to create brand systems that work at scale.
-Our approach: Technical rigor meets design intention. We build tools, not just deliverables."

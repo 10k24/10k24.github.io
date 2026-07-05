@@ -1,10 +1,8 @@
 ---
 title: "Projects"
 layout: base
-description: "A computing / creativity / collaboration studio based in Los Angeles"
 ---
 
-<!-- TODO: hero copy, maybe not as large? -->
 <div class="project-header">
     <h1>Projects</h1>
     <p>We work at the intersection of computing, creativity, and collaboration.
@@ -13,17 +11,32 @@ description: "A computing / creativity / collaboration studio based in Los Angel
     </p>
 </div>
 
+<br>
+<hr>
+<br>
 
 <!-- TODO: here could be a row of project types / services -->
 <!-- TODO: different grid layout, maybe paragraph context or 2-up layout? -->
-<div class="project-list">
-    {%- for project in collections.brandProjects -%}
+<h2>Design</h2>
+<div class="section-content">
+    <p>Our core expertise is in graphic design across visual identity design, print production, and design systems.</p>
+</div>
+<div class="project-list" style="margin-top:4rem">
+    {%- for project in collections.designProjects -%}
         <div class="project-list-item">
             {% include "_includes/partials/project-item" %}
         </div>
     {%- endfor -%}
 </div>
 
+<br>
+<hr>
+<br>
+
+<h2>Computing</h2>
+<div class="section-content">
+    <p>We also build tools and explore creative technology through open source and independent projects.</p>
+</div>
 <div class="grid-3" style="margin-top:4rem">
     {%- for project in collections.techProjects -%}
         <div class="project-list-item">

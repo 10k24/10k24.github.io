@@ -4,12 +4,13 @@ layout: base
 description: "A computing / creativity / collaboration studio based in Los Angeles"
 ---
 
-<div class="idea-list" id="ideas">
+<section class="section-with-list" id="ideas">
+    <h2>Ideas</h2>
     {%- for idea in collections.ideas -%}
         {% if idea.data.visible %}
-            <div class="idea-list-item">
+            <div class="idea-list-item fade">
                 {% include "_includes/partials/idea-item" %}
             </div>
         {% endif %}
     {%- endfor -%}
-</div>
+</section>

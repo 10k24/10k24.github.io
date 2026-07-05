@@ -63,9 +63,10 @@ I’m writing this in spring of 2026, about four months ago I came up with the n
 
 We all have the same 24 hours, how will you spend yours? LFG.
 
-With gratitude,
-Shakeel
+With gratitude,<br>
+Shakeel<br>
 10k24 Studio
 
+<br>
 
 >These thoughts are artisanally crafted without the use of generative AI.

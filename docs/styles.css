@@ -332,28 +332,28 @@ button > a:hover {
 
 .menu-toggle, .menu-close {
     display: none;
-    background: none;
-    border: none;
-    color: #FFFFFF;
-    font-size: 1.5rem;
-    padding: 0.25rem;
-    cursor: pointer;
-    min-width: 44px;
-    min-height: 44px;
     align-items: center;
     justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.25rem;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .mobile-menu {
     display: none;
-    flex-direction: column;
     flex: 1;
+    flex-direction: column;
     padding: 2rem 0;
 }
 
 .menu-links {
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 2rem;
 }
@@ -494,13 +494,13 @@ body.menu-open .menu-close {
 
     .full-width {
         width: 100vw;
-        margin-right: -2rem;
-        margin-left: -2rem;
+        margin-right: -1rem;
+        margin-left: -1rem;
     }
 
     .tagline-wrap {
         width: 100vw;
-        margin: 0 -2rem;
+        margin: 0 -1rem;
     }
 
     .tagline {

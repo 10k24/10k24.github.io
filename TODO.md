@@ -19,6 +19,7 @@ addressed.
 
 # MVP launch
 
+- [ ] uncomment ideas from nav once ready (basel.liquid)
 - [ ] update cover image for MJ
 - [ ] update all cover images to be full res, or much higher... now they are basically 100vw
 - [ ] logo animation should be vertically centered at top of page

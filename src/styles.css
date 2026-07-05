@@ -395,14 +395,9 @@ body.menu-open .menu-close {
         display: inline-flex;
     }
 
-    /* header {
-        flex-wrap: wrap;
+    header {
+        align-items: center;
     }
-
-    .nav-item > a {
-        padding: 0.75rem;
-        font-size: 1.1rem;
-    } */
 
     footer {
         flex-direction: column-reverse;

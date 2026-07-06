@@ -4,8 +4,6 @@ Missing pages (critical gaps)
 
 1. About page — No studio/team story, no faces, no credentials. Every design studio has this. Right now the only story is buried in an
 /ideas post.
-2. Nav is broken — Only "Email Us" is in the nav. Projects and Ideas aren't linked from header. A visitor can't discover the depth of the
-site.
 
 Content gaps on existing pages
 
@@ -17,23 +15,18 @@ story, no reason a client would care.
 
 # MVP launch
 
-- [ ] uncomment ideas from nav once ready (base.liquid)
 - [ ] update cover image for MJ
 - [ ] update all cover images to be full res, or much higher... now they are basically 100vw
 - [ ] logo animation should be vertically centered at top of page
 - [ ] maybe indicate down to hint for scroll, z-index 9999
 - [ ] experiment with lottiefile animation as a permanent background underneath content hmm
 - [ ] 404 page - similar motion idea to homepage animation
-- [ ] ideas list page
-- [ ] idea individual pages (obv with coherent thoughts)
 - [ ] for ideas pages, generate og images at build time - see: https://github.com/vercel/satori#documentation
 - [ ] Workflow - each new project (especially the technical ones), get 2 posts: project page and idea/blog page announcing it. That then gets pushed to socials, etc. Tight workflow, and should help with SEO
-- [ ] mobile menu
-- [ ] Bring back full sitemap
 - [ ] Add feed.xml
 - [ ] Studio + services page, basically show credibility
 - [ ] services on home page -- DO NOT use the word “brand” for its negative historical meanings, and maybe even include a statement about why
-- [ ] 3 landing pages for niches: /culture, /tech, etc.
+- [ ] 3 landing pages for niches: /space, /culture, /tech, etc.
 - [ ] write .github/profile/README file with similar content as above, but shorter;
    - [ ] probably need some infographic for the 3 pillars: Creativity, Computing, Collaboration
 
@@ -41,7 +34,6 @@ story, no reason a client would care.
 
 - [ ] Salgirah: add wristband mockup
 - [ ] Salgirah - include some digital, good opportunity for showing headlines in different languages (could be social posts or large screens)
-
 
 ## Features
 

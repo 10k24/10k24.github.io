@@ -35,8 +35,31 @@ module.exports = function (eleventyConfig) {
         return order.map(url => projects.find(p => p.url === url)).filter(Boolean);
     });
 
+    eleventyConfig.addCollection("publicDesignProjects", function(collectionApi) {
+        const projects = collectionApi.getFilteredByTag("projects");
+        const order = [
+            "/projects/planetary-society/",
+            "/projects/salgirah-festival/",
+            "/projects/midjourney/"
+        ];
+        return order
+            .map(url => projects.find(p => p.url === url))
+            .filter(Boolean)
+            .filter(p => p.data.visible !== false);
+    });
+
+    eleventyConfig.addCollection("publicTechProjects", function(collectionApi) {
+        return collectionApi.getFilteredByTag("tech")
+            .reverse()
+            .filter(p => p.data.visible !== false);
+    });
+
+    eleventyConfig.addCollection("publicIdeas", function(collectionApi) {
+        return collectionApi.getFilteredByTag("ideas")
+            .filter(p => p.data.visible !== false);
+    });
+
     eleventyConfig.ignores.add("**/cover.liquid");
-    // eleventyConfig.ignores.add("**/ideas");
 
     eleventyConfig.setTemplateFormats([
         "liquid",
@@ -91,4 +114,16 @@ module.exports = function (eleventyConfig) {
         greedy: false // This is done for sitemap.txt, consider an alternative solution
     };
     eleventyConfig.setLibrary("liquid", new Liquid(options));
+
+    eleventyConfig.addTransform("external-links", function(content) {
+        if (!content || !content.includes("<a ")) return content;
+        return content.replace(
+            /<a\s+([^>]*?)href="(https?:\/\/[^"]+)"([^>]*)>/gi,
+            (match, before, url, after) => {
+                if (url.includes("10k24.com")) return match;
+                if (/\btarget\s*=/.test(match)) return match;
+                return `<a ${before}href="${url}" target="_blank" rel="noopener noreferrer"${after}>`;
+            }
+        );
+    });
 };

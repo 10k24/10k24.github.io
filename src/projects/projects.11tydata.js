@@ -1,2 +1,5 @@
-// intentionally empty — tag display logic lives in the displayTags filter in .eleventy.js
-module.exports = {};
+module.exports = {
+    eleventyComputed: {
+        visible: data => !data.page.inputPath.includes("/_")
+    }
+};

@@ -5,6 +5,10 @@ eleventyExcludeFromCollections: true
 ---
 {{metadata.baseURL}}
 {{metadata.baseURL}}/projects/
-{%- for p in collections.designProjects -%}
+{%- for p in collections.publicDesignProjects -%}
+{{metadata.baseURL}}{{p.url}}
+{%- endfor -%}
+{{metadata.baseURL}}/ideas/
+{%- for p in collections.publicIdeas -%}
 {{metadata.baseURL}}{{p.url}}
 {%- endfor -%}

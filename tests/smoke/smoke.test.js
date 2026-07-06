@@ -12,6 +12,8 @@ const EXPECTED_SITEMAP_URLS = [
     `${ORIGIN}/projects/planetary-society/`,
     `${ORIGIN}/projects/salgirah-festival/`,
     `${ORIGIN}/projects/midjourney/`,
+    `${ORIGIN}/ideas/`,
+    `${ORIGIN}/ideas/2026-04-13-ten-thousand-ideas/`,
 ];
 
 function collectHtmlFiles(dir) {

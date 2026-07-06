@@ -23,7 +23,7 @@ This is the critical backstory to the founding of 10k24. The first idea of many.
 
 My whole life I was plagued with wanting to do 10x more than possible with the time and energy available. Until recently I felt torn between the desire to focus and being constantly inspired by another “what if?”. The dance between the two has defined my career. I always operated across disciplines. As a programmer, I thought like a designer. As a compsci student, I studied business and philosophy. Now, a year after completing my MFA in Graphic Design, I can see how everything connects.
 
-You see, every industry showed me a limited number of paths. During my thesis research for [Applied Designer](https://applieddesigner.com/) I found an article saying there are only four career paths for graphic designers. I was shocked by the closed-mindedness that is still so prevalent—we are creative people, why are our career paths so un-creative?
+You see, every industry showed me a limited number of paths. During my thesis research for [Applied Designer](https://applieddesigner.com/) I found an article saying there are only four career paths for graphic designers. I was shocked by the closed-mindedness that is still so prevalent. We are creative people, why are our career paths so uncreative?
 
 ## The Ethos
 

@@ -37,7 +37,8 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+/* Always underline links in blog posts */
+a:hover, .idea-body a {
     text-decoration: underline;
     text-underline-offset: 0.25rem;
 }
@@ -71,7 +72,7 @@ h2 {
     margin-bottom: 8rem;
 }
 
-p {
+p, li {
     line-height: 1.6rem;
     text-wrap: balance;
 }

@@ -13,12 +13,11 @@ Content gaps on existing pages
 from the projects page, they'd look unprofessional.
 4. Tech project pages lack business context — Clock/Processing Native/Words Have Power just exist without a "so what" — no outcome, no
 story, no reason a client would care.
-5. Projects page copy is off-brand — Still uses old "computing, creativity, collaboration" voice. Mentioned in the last audit but never
-addressed.
 
 
 # MVP launch
 
+- [ ] uncomment ideas from nav once ready (base.liquid)
 - [ ] update cover image for MJ
 - [ ] update all cover images to be full res, or much higher... now they are basically 100vw
 - [ ] logo animation should be vertically centered at top of page
@@ -41,6 +40,7 @@ addressed.
 # Salgirah Festival
 
 - [ ] Salgirah: add wristband mockup
+- [ ] Salgirah - include some digital, good opportunity for showing headlines in different languages (could be social posts or large screens)
 
 
 ## Features

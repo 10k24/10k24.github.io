@@ -8,9 +8,12 @@ const ORIGIN = "https://10k24.com";
 
 const EXPECTED_SITEMAP_URLS = [
     `${ORIGIN}`,
+    `${ORIGIN}/projects/`,
     `${ORIGIN}/projects/planetary-society/`,
     `${ORIGIN}/projects/salgirah-festival/`,
     `${ORIGIN}/projects/midjourney/`,
+    `${ORIGIN}/ideas/`,
+    `${ORIGIN}/ideas/2026-04-13-ten-thousand-ideas/`,
 ];
 
 function collectHtmlFiles(dir) {
@@ -19,7 +22,7 @@ function collectHtmlFiles(dir) {
         const full = join(dir, entry.name);
         if (entry.isDirectory()) {
             files.push(...collectHtmlFiles(full));
-        } else if (entry.name === "index.html") {
+        } else if (entry.name.endsWith(".html")) {
             files.push(full);
         }
     }
@@ -99,10 +102,39 @@ describe("HTML integrity", () => {
     }
 });
 
+describe("robots.txt", () => {
+    const filePath = join(DOCS, "robots.txt");
+
+    test("exists", () => {
+        expect(existsSync(filePath)).toBe(true);
+    });
+
+    if (existsSync(filePath)) {
+        const content = readFileSync(filePath, "utf8");
+
+        test("sitemap URL matches metadata.baseURL", () => {
+            expect(content).toContain("Sitemap: https://10k24.com/sitemap.txt");
+            expect(content).not.toContain("www.10k24.com");
+        });
+
+        test("disallows tech projects but not all /projects", () => {
+            expect(content).not.toContain("Disallow: /projects\n");
+            expect(content).toContain("Disallow: /projects/clock/");
+            expect(content).toContain("Disallow: /projects/processing-native/");
+            expect(content).toContain("Disallow: /projects/words-have-power/");
+        });
+
+        test("allows design projects", () => {
+            expect(content).not.toContain("Disallow: /projects/planetary-society/");
+            expect(content).not.toContain("Disallow: /projects/salgirah-festival/");
+            expect(content).not.toContain("Disallow: /projects/midjourney/");
+        });
+    }
+});
+
 describe("static assets", () => {
     const assets = [
         "styles.css",
-        "robots.txt",
         "img/opengraph.png",
     ];
 

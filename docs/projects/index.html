@@ -42,10 +42,11 @@
         "@type": "Organization",
         "name": "10k24 Studio",
         "url": "https://10k24.com",
-        "description": "",
+        "description": "A design studio built on creativity, computing, and collaboration.",
         "sameAs": [
             "https://github.com/10k24",
-            "https://instagram.com/10k24.studio"
+            "https://instagram.com/10k24.studio",
+            "https://www.linkedin.com/company/10k24/"
         ],
         "contactPoint": {
             "@type": "ContactPoint",
@@ -55,36 +56,44 @@
     }
     </script>
     
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+    
 </head>
 <body>
     <header>
         <div class="header-logo">
             <a href="/">
-                <img class="header-logo" src="/img/10k24_shortform_logo.svg" draggable="false" />
+                <img class="header-logo" src="/img/10k24_shortform_logo.svg" alt="10k24 logo" draggable="false" />
             </a>
         </div>
         <nav>
-            <!-- <div class="nav-item">
-                <a href="/">Home</a>
-            </div> -->
-            <!-- <div class="nav-item">
-                <a href="/projects">Projects</a>
-            </div> -->
-            <!-- <div class="nav-item">
-                <a href="/ideas"></a>
+            <div class="nav-item">
+                <a href="/ideas">Ideas</a>
             </div>
             <div class="nav-item">
-                <a href="/about"></a>
-            </div> -->
+                <a href="/projects">Projects</a>
+            </div>
             <div class="nav-item">
                 <a href="mailto:info@10k24.com">Email Us</a>
             </div>
         </nav>
+        <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
+        <button class="menu-close" aria-label="Close menu">&#10005;</button>
     </header>
+    <div class="mobile-menu" role="dialog" aria-label="Navigation menu">
+        <div class="menu-links">
+            <a href="/">Home</a>
+            <a href="/ideas">Ideas</a>
+            <a href="/projects">Projects</a>
+        </div>
+        <br>
+        <div class="menu-bottom">
+            <a href="mailto:info@10k24.com">Email</a>
+            <a href="https://github.com/10k24" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://instagram.com/10k24.studio" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+    </div>
     <main>
         
-<!-- TODO: hero copy, maybe not as large? -->
 <div class="project-header">
     <h1>Projects</h1>
     <p>We work at the intersection of computing, creativity, and collaboration.
@@ -93,13 +102,90 @@
     </p>
 </div>
 
+<br>
+<hr>
+<br>
 
 <!-- TODO: here could be a row of project types / services -->
 <!-- TODO: different grid layout, maybe paragraph context or 2-up layout? -->
-<div class="project-list">
+<h2>Design</h2>
+<div class="section-content">
+    <div class="section-item">
+        <p>Our core expertise is in graphic design across visual identity design, print production, and design systems.</p>
+    </div>
+</div>
+<div class="project-list" style="margin-top:4rem">
+        <div class="project-list-item fade">
+            
+
+
+
+
+<a href="/projects/planetary-society/">
+
+    
+        <video class="og-scale" autoplay loop muted playsinline preload="metadata">
+            <source src="/projects/planetary-society/img/Planetary_Society_cover_vid.mp4" type="video/mp4">
+        </video>
+    
+    <h3 class="project-title">Planetary Society</h3>
+    <p class="project-meta">Visual Identity</p>
+
+</a>
+
+
+        </div>
+        <div class="project-list-item fade">
+            
+
+
+
+
+<a href="/projects/salgirah-festival/">
+
+    
+        <video class="og-scale" autoplay loop muted playsinline preload="metadata">
+            <source src="/projects/salgirah-festival/img/Salgirah_cover.mp4" type="video/mp4">
+        </video>
+    
+    <h3 class="project-title">Salgirah Festival</h3>
+    <p class="project-meta">Visual Identity</p>
+
+</a>
+
+
+        </div>
+        <div class="project-list-item fade">
+            
+
+
+
+
+<a href="/projects/midjourney/">
+
+    
+        <img class="og-scale" src="/projects/midjourney/img/Midjourney - opengraph.png" alt="Midjourney cover image" />
+    
+    <h3 class="project-title">Midjourney</h3>
+    <p class="project-meta">Visual Identity</p>
+
+</a>
+
+
+        </div>
 </div>
 
-<div class="grid-3" style="margin-top:4rem">
+<br>
+<hr>
+<br>
+
+<h2>Computing</h2>
+<div class="section-content">
+    <div class="section-item">
+        <p>We also build tools and explore creative technology through open source and independent projects.</p>
+    </div>
+</div>
+<div class="grid-3 fade" style="margin-top:4rem">
         <div class="project-list-item">
             
 
@@ -144,7 +230,6 @@
         </div>
 </div>
 
-
         <section class="section-last">
             <hr>
             <h2 class="footer-cta">Ready to work together?</h2>
@@ -164,12 +249,42 @@
     <footer>
         <p>&copy; <span id="year"></span> 10k24 Studio. Los&nbsp;Angeles,&nbsp;California.</p>
         <div class="footer-links">
-            <a href="https://instagram.com/10k24.studio" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="https://github.com/10k24" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://instagram.com/10k24.studio" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="mailto:info@10k24.com">info<span class="alt-at">@</span>10k24.com</a>
         </div>
     </footer>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+        (function() {
+            var toggle = document.querySelector('.menu-toggle');
+            var close = document.querySelector('.menu-close');
+            if (!toggle || !close) return;
+            toggle.addEventListener('click', function() {
+                document.body.classList.add('menu-open');
+            });
+            close.addEventListener('click', function() {
+                document.body.classList.remove('menu-open');
+            });
+        })();
+    </script>
+    <script>
+        (function() {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            var observer = new IntersectionObserver(function(entries) {
+                for (var i = 0; i < entries.length; i++) {
+                    if (entries[i].isIntersecting) {
+                        entries[i].target.classList.add('in-view');
+                        observer.unobserve(entries[i].target);
+                    }
+                }
+            });
+            var items = document.querySelectorAll('.fade');
+            for (var j = 0; j < items.length; j++) {
+                observer.observe(items[j]);
+            }
+        })();
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPZFEJK5BG"></script>
     <script>
@@ -179,53 +294,7 @@
 
         gtag('config', 'G-CPZFEJK5BG');
     </script>
-    <script
-      src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"
-      type="module"
-    ></script>
-    <script>
-        // Load unique sketch scripts and instantiate all p5 sketches
-        window.sketches = window.sketches || {};
-        
-        const containers = document.querySelectorAll('[data-sketch-file]');
-        const uniqueSources = new Set();
-        
-        // Collect unique sketch sources
-        containers.forEach(function(container) {
-            const src = container.dataset.sketchSrc;
-            if (src) uniqueSources.add(src);
-        });
-        
-        // Load scripts sequentially
-        let loadPromise = Promise.resolve();
-        uniqueSources.forEach(function(src) {
-            loadPromise = loadPromise.then(function() {
-                return new Promise(function(resolve) {
-                    const script = document.createElement('script');
-                    script.src = src;
-                    script.onload = resolve;
-                    document.body.appendChild(script);
-                });
-            });
-        });
-        
-        // After all scripts loaded, instantiate sketches
-        loadPromise.then(function() {
-            containers.forEach(function(container) {
-                const sketchFile = container.dataset.sketchFile;
-                const containerId = sketchFile + '-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
-                container.id = containerId;
-                if (window.sketches[sketchFile]) {
-                    window.sketches[containerId] = window.sketches[sketchFile];
-                }
-            });
-            
-            for (let s of Object.keys(window.sketches)) {
-                if (document.getElementById(s)) {
-                    new p5(window.sketches[s], s);
-                }
-            }
-        });
-    </script>
+    
+    
 </body>
 </html>

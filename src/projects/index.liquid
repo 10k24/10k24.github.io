@@ -1,6 +1,7 @@
 ---
 title: "Projects"
 layout: base
+description: "A computing / creativity / collaboration studio based in Los Angeles"
 ---
 
 <div class="project-header">
@@ -19,11 +20,13 @@ layout: base
 <!-- TODO: different grid layout, maybe paragraph context or 2-up layout? -->
 <h2>Design</h2>
 <div class="section-content">
-    <p>Our core expertise is in graphic design across visual identity design, print production, and design systems.</p>
+    <div class="section-item">
+        <p>Our core expertise is in graphic design across visual identity design, print production, and design systems.</p>
+    </div>
 </div>
 <div class="project-list" style="margin-top:4rem">
     {%- for project in collections.designProjects -%}
-        <div class="project-list-item">
+        <div class="project-list-item fade">
             {% include "_includes/partials/project-item" %}
         </div>
     {%- endfor -%}
@@ -35,9 +38,11 @@ layout: base
 
 <h2>Computing</h2>
 <div class="section-content">
-    <p>We also build tools and explore creative technology through open source and independent projects.</p>
+    <div class="section-item">
+        <p>We also build tools and explore creative technology through open source and independent projects.</p>
+    </div>
 </div>
-<div class="grid-3" style="margin-top:4rem">
+<div class="grid-3 fade" style="margin-top:4rem">
     {%- for project in collections.techProjects -%}
         <div class="project-list-item">
             {% include "_includes/partials/project-item" %}

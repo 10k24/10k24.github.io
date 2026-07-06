@@ -10,7 +10,7 @@ function collectHtmlFiles(dir) {
         const full = join(dir, entry.name);
         if (entry.isDirectory()) {
             files.push(...collectHtmlFiles(full));
-        } else if (entry.name === "index.html") {
+        } else if (entry.name.endsWith(".html")) {
             files.push(full);
         }
     }

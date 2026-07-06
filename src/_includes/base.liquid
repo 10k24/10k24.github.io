@@ -1,5 +1,7 @@
 ---
 openGraphImage: "/img/opengraph.png"
+useP5: false
+useDotLottie: false
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +9,7 @@ openGraphImage: "/img/opengraph.png"
     <title>{{metadata.studioname}} | {{title}}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{description}}">
+    <meta name="description" content="{{ description | default: metadata.description }}">
     <meta name="author" content="{{metadata.author.name}}">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#000000">
@@ -18,14 +20,14 @@ openGraphImage: "/img/opengraph.png"
     <meta property="og:image" content="{{metadata.baseURL}}{{openGraphImage}}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:description" content="{{description}}" />
+    <meta property="og:description" content="{{ description | default: metadata.description }}" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="{{metadata.studioname}}" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{metadata.studioname}} | {{title}}" />
-    <meta name="twitter:description" content="{{description}}" />
+    <meta name="twitter:description" content="{{ description | default: metadata.description }}" />
     <meta name="twitter:image" content="{{metadata.baseURL}}{{openGraphImage}}" />
 
     <link rel="stylesheet" href="https://use.typekit.net/rli7dce.css">
@@ -47,8 +49,8 @@ openGraphImage: "/img/opengraph.png"
         "url": "{{metadata.baseURL}}",
         "description": "{{metadata.description}}",
         "sameAs": [
-            "https://github.com/10k24",
-            "https://instagram.com/10k24.studio"
+            "{{metadata.social.GitHub}}",
+            "{{metadata.social.Instagram}}"
         ],
         "contactPoint": {
             "@type": "ContactPoint",
@@ -58,13 +60,15 @@ openGraphImage: "/img/opengraph.png"
     }
     </script>
     
+    {% if useP5 %}
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+    {% endif %}
 </head>
 <body>
     <header>
         <div class="header-logo">
             <a href="/">
-                <img class="header-logo" src="/img/10k24_shortform_logo.svg" draggable="false" />
+                <img class="header-logo" src="/img/10k24_shortform_logo.svg" alt="10k24 logo" draggable="false" />
             </a>
         </div>
         <nav>
@@ -112,7 +116,7 @@ openGraphImage: "/img/opengraph.png"
         <p>&copy; <span id="year"></span> {{metadata.studioname}}. Los&nbsp;Angeles,&nbsp;California.</p>
         <div class="footer-links">
             <a href="https://instagram.com/10k24.studio" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://github.com/10k24" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="{{metadata.social.GitHub}}" target="_blank" rel="noopener noreferrer">GitHub</a>
             {% emailLink metadata.author.email %}
         </div>
     </footer>
@@ -130,6 +134,23 @@ openGraphImage: "/img/opengraph.png"
             });
         })();
     </script>
+    <script>
+        (function() {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            var observer = new IntersectionObserver(function(entries) {
+                for (var i = 0; i < entries.length; i++) {
+                    if (entries[i].isIntersecting) {
+                        entries[i].target.classList.add('in-view');
+                        observer.unobserve(entries[i].target);
+                    }
+                }
+            });
+            var items = document.querySelectorAll('.fade');
+            for (var j = 0; j < items.length; j++) {
+                observer.observe(items[j]);
+            }
+        })();
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPZFEJK5BG"></script>
     <script>
@@ -139,10 +160,13 @@ openGraphImage: "/img/opengraph.png"
 
         gtag('config', 'G-CPZFEJK5BG');
     </script>
+    {% if useDotLottie %}
     <script
       src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"
       type="module"
     ></script>
+    {% endif %}
+    {% if useP5 %}
     <script>
         // Load unique sketch scripts and instantiate all p5 sketches
         window.sketches = window.sketches || {};
@@ -187,5 +211,6 @@ openGraphImage: "/img/opengraph.png"
             }
         });
     </script>
+    {% endif %}
 </body>
 </html>

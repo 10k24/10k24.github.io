@@ -1,3 +1,7 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
 User-agent: *
 Disallow: *.json
 Disallow: *.md
@@ -6,4 +10,4 @@ Disallow: /projects/clock/
 Disallow: /projects/processing-native/
 Disallow: /projects/words-have-power/
 
-Sitemap: https://10k24.com/sitemap.txt
+Sitemap: {{metadata.baseURL}}/sitemap.txt

@@ -9,7 +9,7 @@ module.exports = {
             return data.date.toISOString().split("T")[0];
         },
         visible: data => {
-            const visible = data.page.inputPath.match(/^\.\/src\/ideas\/_/);
+            const visible = data.page.inputPath.includes('/_');
             console.log(data.page.inputPath, !visible);
             return !visible;
         }

@@ -4,7 +4,7 @@
     <title>10k24 Studio | Projects</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="A computing / creativity / collaboration studio based in Los Angeles">
     <meta name="author" content="TEN THOUSAND IDEAS, TWENTY-FOUR HOURS">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#000000">
@@ -15,14 +15,14 @@
     <meta property="og:image" content="https://10k24.com/img/opengraph.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:description" content="" />
+    <meta property="og:description" content="A computing / creativity / collaboration studio based in Los Angeles" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="10k24 Studio" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="10k24 Studio | Projects" />
-    <meta name="twitter:description" content="" />
+    <meta name="twitter:description" content="A computing / creativity / collaboration studio based in Los Angeles" />
     <meta name="twitter:image" content="https://10k24.com/img/opengraph.png" />
 
     <link rel="stylesheet" href="https://use.typekit.net/rli7dce.css">
@@ -42,7 +42,7 @@
         "@type": "Organization",
         "name": "10k24 Studio",
         "url": "https://10k24.com",
-        "description": "",
+        "description": "A design studio built on creativity, computing, and collaboration.",
         "sameAs": [
             "https://github.com/10k24",
             "https://instagram.com/10k24.studio"
@@ -55,13 +55,13 @@
     }
     </script>
     
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+    
 </head>
 <body>
     <header>
         <div class="header-logo">
             <a href="/">
-                <img class="header-logo" src="/img/10k24_shortform_logo.svg" draggable="false" />
+                <img class="header-logo" src="/img/10k24_shortform_logo.svg" alt="10k24 logo" draggable="false" />
             </a>
         </div>
         <nav>
@@ -104,10 +104,12 @@
 <!-- TODO: different grid layout, maybe paragraph context or 2-up layout? -->
 <h2>Design</h2>
 <div class="section-content">
-    <p>Our core expertise is in graphic design across visual identity design, print production, and design systems.</p>
+    <div class="section-item">
+        <p>Our core expertise is in graphic design across visual identity design, print production, and design systems.</p>
+    </div>
 </div>
 <div class="project-list" style="margin-top:4rem">
-        <div class="project-list-item">
+        <div class="project-list-item fade">
             
 
 
@@ -127,7 +129,7 @@
 
 
         </div>
-        <div class="project-list-item">
+        <div class="project-list-item fade">
             
 
 
@@ -147,7 +149,7 @@
 
 
         </div>
-        <div class="project-list-item">
+        <div class="project-list-item fade">
             
 
 
@@ -173,9 +175,11 @@
 
 <h2>Computing</h2>
 <div class="section-content">
-    <p>We also build tools and explore creative technology through open source and independent projects.</p>
+    <div class="section-item">
+        <p>We also build tools and explore creative technology through open source and independent projects.</p>
+    </div>
 </div>
-<div class="grid-3" style="margin-top:4rem">
+<div class="grid-3 fade" style="margin-top:4rem">
         <div class="project-list-item">
             
 
@@ -259,6 +263,23 @@
             });
         })();
     </script>
+    <script>
+        (function() {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            var observer = new IntersectionObserver(function(entries) {
+                for (var i = 0; i < entries.length; i++) {
+                    if (entries[i].isIntersecting) {
+                        entries[i].target.classList.add('in-view');
+                        observer.unobserve(entries[i].target);
+                    }
+                }
+            });
+            var items = document.querySelectorAll('.fade');
+            for (var j = 0; j < items.length; j++) {
+                observer.observe(items[j]);
+            }
+        })();
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPZFEJK5BG"></script>
     <script>
@@ -268,53 +289,7 @@
 
         gtag('config', 'G-CPZFEJK5BG');
     </script>
-    <script
-      src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"
-      type="module"
-    ></script>
-    <script>
-        // Load unique sketch scripts and instantiate all p5 sketches
-        window.sketches = window.sketches || {};
-        
-        const containers = document.querySelectorAll('[data-sketch-file]');
-        const uniqueSources = new Set();
-        
-        // Collect unique sketch sources
-        containers.forEach(function(container) {
-            const src = container.dataset.sketchSrc;
-            if (src) uniqueSources.add(src);
-        });
-        
-        // Load scripts sequentially
-        let loadPromise = Promise.resolve();
-        uniqueSources.forEach(function(src) {
-            loadPromise = loadPromise.then(function() {
-                return new Promise(function(resolve) {
-                    const script = document.createElement('script');
-                    script.src = src;
-                    script.onload = resolve;
-                    document.body.appendChild(script);
-                });
-            });
-        });
-        
-        // After all scripts loaded, instantiate sketches
-        loadPromise.then(function() {
-            containers.forEach(function(container) {
-                const sketchFile = container.dataset.sketchFile;
-                const containerId = sketchFile + '-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
-                container.id = containerId;
-                if (window.sketches[sketchFile]) {
-                    window.sketches[containerId] = window.sketches[sketchFile];
-                }
-            });
-            
-            for (let s of Object.keys(window.sketches)) {
-                if (document.getElementById(s)) {
-                    new p5(window.sketches[s], s);
-                }
-            }
-        });
-    </script>
+    
+    
 </body>
 </html>

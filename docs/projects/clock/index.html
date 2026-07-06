@@ -42,7 +42,7 @@
         "@type": "Organization",
         "name": "10k24 Studio",
         "url": "https://10k24.com",
-        "description": "",
+        "description": "A design studio built on creativity, computing, and collaboration.",
         "sameAs": [
             "https://github.com/10k24",
             "https://instagram.com/10k24.studio"
@@ -55,13 +55,15 @@
     }
     </script>
     
+    
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+    
 </head>
 <body>
     <header>
         <div class="header-logo">
             <a href="/">
-                <img class="header-logo" src="/img/10k24_shortform_logo.svg" draggable="false" />
+                <img class="header-logo" src="/img/10k24_shortform_logo.svg" alt="10k24 logo" draggable="false" />
             </a>
         </div>
         <nav>
@@ -153,6 +155,23 @@
             });
         })();
     </script>
+    <script>
+        (function() {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            var observer = new IntersectionObserver(function(entries) {
+                for (var i = 0; i < entries.length; i++) {
+                    if (entries[i].isIntersecting) {
+                        entries[i].target.classList.add('in-view');
+                        observer.unobserve(entries[i].target);
+                    }
+                }
+            });
+            var items = document.querySelectorAll('.fade');
+            for (var j = 0; j < items.length; j++) {
+                observer.observe(items[j]);
+            }
+        })();
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPZFEJK5BG"></script>
     <script>
@@ -162,10 +181,8 @@
 
         gtag('config', 'G-CPZFEJK5BG');
     </script>
-    <script
-      src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"
-      type="module"
-    ></script>
+    
+    
     <script>
         // Load unique sketch scripts and instantiate all p5 sketches
         window.sketches = window.sketches || {};
@@ -210,5 +227,6 @@
             }
         });
     </script>
+    
 </body>
 </html>

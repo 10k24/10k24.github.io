@@ -3,7 +3,8 @@ permalink: /sitemap.txt
 dynamicPermalink: false
 eleventyExcludeFromCollections: true
 ---
-{{metadata.baseURL}}{{p.url}}
+{{metadata.baseURL}}
+{{metadata.baseURL}}/projects/
 {%- for p in collections.designProjects -%}
 {{metadata.baseURL}}{{p.url}}
 {%- endfor -%}

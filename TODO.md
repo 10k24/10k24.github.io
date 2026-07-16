@@ -39,6 +39,7 @@ story, no reason a client would care.
 
 - [ ] try this motion library over GSAP: https://motion.dev/
    - [ ] try more techniques: https://www.creativecodingclub.com/courses/gsap-3-express
+   - [ ] refs https://webflow.com/made-in-webflow/gsap/recent?cloneable=true
 - [ ] components for project, metadata, etc?
 - [ ] move idea generator into this repo, maybe under a tools section: https://github.com/smideas/smideas.github.io/blob/main/index.html
    - [ ] reference: https://shouldideploy.today/

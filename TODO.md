@@ -38,6 +38,7 @@ story, no reason a client would care.
 ## Features
 
 - [ ] try this motion library over GSAP: https://motion.dev/
+   - [ ] try more techniques: https://www.creativecodingclub.com/courses/gsap-3-express
 - [ ] components for project, metadata, etc?
 - [ ] move idea generator into this repo, maybe under a tools section: https://github.com/smideas/smideas.github.io/blob/main/index.html
    - [ ] reference: https://shouldideploy.today/
